@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto &middot; Milpa</title>
+  <meta name="description" content="Contacto y reservaciones -- Milpa, restaurante de cocina mexicana de raíz." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/main-C72l3y1T.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Dv8mTA1y.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./index.html">Milpa</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="./index.html">Inicio</a>
+        <a href="./menu.html">Menú</a>
+        <a class="is-active" href="./contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="page-banner" style="height: min(38vh, 320px); min-height: 240px;">
+      <!-- DUMMY -- foto generica de Unsplash como placeholder -->
+      <img src="https://images.unsplash.com/photo-1602232037779-30b01ac3c457?auto=format&fit=crop&w=1800&q=80" alt="" />
+      <div class="container page-banner-content">
+        <p class="eyebrow">Contacto</p>
+        <h1>Reservemos tu mesa</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container contact-grid" data-reveal-group>
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Escríbenos</h3>
+            <p><a href="mailto:reservaciones@milparestaurante.mx">reservaciones@milparestaurante.mx</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/525512345678" target="_blank" rel="noopener">+52 55 1234 5678</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Dirección</h3>
+            <p>Reemplaza con la dirección real -- calle, colonia, ciudad. Ej. Av. Álvaro Obregón 145, Roma Norte, CDMX.</p>
+          </div>
+          <div class="contact-item">
+            <h3>Horario</h3>
+            <p>Martes a domingo, 13:00 &ndash; 23:00. Lunes cerrado.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:reservaciones@milparestaurante.mx">Escribir un correo</a>
+            <a class="btn btn-ghost" href="https://wa.me/525512345678" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" onsubmit="return false">
+            <label class="field-full">
+              Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
+            </label>
+            <label>
+              Correo
+              <input type="email" name="correo" placeholder="tu@correo.com" required />
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" placeholder="55 0000 0000" />
+            </label>
+            <label>
+              Fecha
+              <input type="date" name="fecha" required />
+            </label>
+            <label>
+              Personas
+              <input type="number" name="personas" min="1" max="20" placeholder="2" required />
+            </label>
+            <label class="field-full">
+              Mensaje
+              <textarea name="mensaje" placeholder="Alguna petición especial (alergias, ocasión, etc.)"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+          </form>
+          <div class="contact-map">Mapa / ubicación</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Milpa</p>
+        <p class="footer-tagline">Cocina mexicana de raíz. De la milpa a la mesa, todos los días.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navegación</p>
+        <nav class="footer-links">
+          <a href="./menu.html">Menú</a>
+          <a href="./contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Síguenos</p>
+        <nav class="footer-links">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-note">&copy; 2026 Milpa.</p>
+      <p class="footer-note">Hecho con maíz, fuego y paciencia en México.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

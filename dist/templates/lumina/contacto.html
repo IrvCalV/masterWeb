@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto &middot; Lúmina Clínica Dental &amp; Estética</title>
+  <meta name="description" content="Agenda tu cita en Lúmina -- dirección, horario y formulario de solicitud de cita." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/main-DXWLlzsA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BFyv7lRl.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./index.html">Lúmina</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="./index.html">Inicio</a>
+        <a href="./servicios.html">Servicios</a>
+        <a class="is-active" href="./contacto.html">Contacto</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="#appointment-form">Agenda tu cita</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="page-banner" style="height: min(38vh, 320px); min-height: 240px;">
+      <!-- DUMMY -- foto generica de Unsplash como placeholder -->
+      <img src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&w=1800&q=80" alt="" />
+      <div class="container page-banner-content">
+        <p class="eyebrow">Contacto</p>
+        <h1>Agenda tu cita</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container contact-grid" data-reveal-group>
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Escríbenos</h3>
+            <p><a href="mailto:hola@luminaclinica.mx">hola@luminaclinica.mx</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/525548213390" target="_blank" rel="noopener">+52 55 4821 3390</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Clínica</h3>
+            <p>Reemplaza con la dirección real -- calle, colonia, ciudad.</p>
+          </div>
+          <div class="contact-item">
+            <h3>Horario</h3>
+            <p>Lunes a viernes, 9:00 -- 19:00<br />Sábados, 9:00 -- 14:00</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:hola@luminaclinica.mx">Escribir un correo</a>
+            <a class="btn btn-ghost" href="https://wa.me/525548213390" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-map">Mapa / ubicación</div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE CITA -->
+    <section>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Solicita tu cita</p>
+          <h2>Cuéntanos qué necesitas</h2>
+          <p class="lede">Completa el formulario y te confirmamos tu cita por correo o WhatsApp en menos de 24 horas.</p>
+        </div>
+
+        <form class="appointment-form" id="appointment-form" onsubmit="return false" style="max-width: 680px; margin-inline: auto;">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="55 0000 0000" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-field">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio" name="servicio">
+              <option value="">Selecciona una opción</option>
+              <option value="limpieza">Limpieza Dental</option>
+              <option value="blanqueamiento">Blanqueamiento Dental</option>
+              <option value="ortodoncia">Ortodoncia</option>
+              <option value="diseno-sonrisa">Diseño de Sonrisa / Carillas</option>
+              <option value="implantes">Implantes Dentales</option>
+              <option value="botox">Toxina Botulínica (Botox)</option>
+              <option value="rellenos">Rellenos Dérmicos</option>
+              <option value="facial">Limpieza Facial / Hidratación</option>
+              <option value="no-seguro">No estoy seguro</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos si tienes alguna preferencia de horario o alguna duda."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Lúmina</p>
+        <p class="footer-tagline">Clínica dental y de estética facial. Sonrisas que inspiran confianza.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navegación</p>
+        <nav class="footer-links">
+          <a href="./index.html">Inicio</a>
+          <a href="./servicios.html">Servicios</a>
+          <a href="./contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Síguenos</p>
+        <nav class="footer-links">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-note">&copy; 2026 Lúmina Clínica Dental &amp; Estética.</p>
+      <p class="footer-note">Ciudad de México.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

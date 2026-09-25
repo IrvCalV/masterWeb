@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milpa &middot; Cocina mexicana de raíz</title>
+  <meta name="description" content="Milpa -- restaurante de cocina mexicana de raíz en Ciudad de México. Menú, historia y reservaciones." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/main-C72l3y1T.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Dv8mTA1y.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./index.html">Milpa</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a class="is-active" href="./index.html">Inicio</a>
+        <a href="./menu.html">Menú</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-slider">
+      <!--
+        DUMMY -- fotos genericas de Unsplash (licencia libre) solo como
+        placeholder. Reemplaza cada src por fotografia real del
+        restaurante cuando la tengas.
+      -->
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1764099362403-16ee561b079a?auto=format&fit=crop&w=1800&q=80" alt="" />
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1700625916627-16ad4fb0553c?auto=format&fit=crop&w=1800&q=80" alt="" />
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1602232037779-30b01ac3c457?auto=format&fit=crop&w=1800&q=80" alt="" />
+      </div>
+      <div class="hero-scrim"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Cocina mexicana de raíz &middot; Ciudad de México</p>
+        <h1>Sabores que <em>saben a casa</em></h1>
+        <p>
+          De la milpa a la mesa: ingredientes de temporada, recetas de
+          siempre y un fuego que no se apaga. Comida mexicana honesta,
+          servida sin prisa.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-on-dark btn-lg" href="./menu.html">Ver menú</a>
+          <a class="btn btn-on-dark btn-lg" href="./contacto.html">Reservar mesa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="categories">
+      <div class="container categories-grid" data-reveal-group>
+        <a class="category-tile" href="./menu.html">
+          <img src="https://images.unsplash.com/photo-1648437595587-e6a8b0cdf1f9?auto=format&fit=crop&w=1200&q=80" alt="Tacos servidos en tabla de madera" />
+          <div class="category-tile-label">
+            <p class="eyebrow">Explora</p>
+            <h3>El menú</h3>
+            <span class="cta">Entradas, fuertes, postres y bebidas</span>
+          </div>
+        </a>
+        <a class="category-tile" href="./contacto.html">
+          <img src="https://images.unsplash.com/photo-1633894980059-f6763469cc79?auto=format&fit=crop&w=1200&q=80" alt="Mesa puesta en el salón principal" />
+          <div class="category-tile-label">
+            <p class="eyebrow">Reserva</p>
+            <h3>Tu mesa</h3>
+            <span class="cta">Comidas, cenas y grupos</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Destacados</p>
+          <h2>Platillos favoritos</h2>
+          <p class="lede">Una selección de la carta actual. Duplica un <code>.product-card</code> para agregar más platillos.</p>
+        </div>
+
+        <div class="product-grid" data-reveal-group>
+          <article
+            class="product-card"
+            data-name="Aguachile de camarón"
+            data-price="$210 MXN"
+            data-desc="Camarón fresco curtido en limón y chile serrano, con pepino, cebolla morada y aguacate. Picante, ácido y directo."
+            data-img="https://images.unsplash.com/photo-1755144248555-148ed8afd012?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1601039641847-7857b994d704?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Ingrediente de temporada"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1755144248555-148ed8afd012?auto=format&fit=crop&w=700&q=80" alt="Aguachile de camarón" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Aguachile de camarón</p>
+              <p class="product-price">$210 MXN</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Tacos de birria"
+            data-price="$185 MXN"
+            data-desc="Cuatro tacos de birria de res, consomé para remojar, cebolla, cilantro y salsa molcajeteada. El clásico que no falla."
+            data-img="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1601039641847-7857b994d704?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Ingrediente de temporada"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=80" alt="Tacos de birria" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Tacos de birria</p>
+              <p class="product-price">$185 MXN</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Costillar en salsa roja"
+            data-price="$320 MXN"
+            data-desc="Costillar de cerdo cocido lento en salsa de chiles secos, con arroz rojo y rabanitos. Plato fuerte, para compartir o no."
+            data-img="https://images.unsplash.com/photo-1786052600217-992704210ff8?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1601039641847-7857b994d704?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Ingrediente de temporada"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1786052600217-992704210ff8?auto=format&fit=crop&w=700&q=80" alt="Costillar en salsa roja" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Costillar en salsa roja</p>
+              <p class="product-price">$320 MXN</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="story">
+      <div class="story-grid">
+        <div class="story-photo" data-reveal>
+          <!-- DUMMY -- reemplaza por una foto real de la cocina o del
+               chef de la marca cuando la tengas. -->
+          <img
+            src="https://images.unsplash.com/photo-1750943082452-c714763f73b2?auto=format&fit=crop&w=1200&q=80"
+            alt="Chef sirviendo un platillo"
+          />
+        </div>
+        <div class="story-copy-wrap">
+          <div class="story-copy" data-reveal-group>
+            <p class="eyebrow">Nuestra historia</p>
+            <h2>&ldquo;La milpa nos enseñó que todo tiene su tiempo.&rdquo;</h2>
+            <p>
+              Reemplaza este texto con la historia real del restaurante: de
+              dónde vienen los ingredientes, quién está en la cocina y qué
+              hace distinta a la casa.
+            </p>
+            <div class="story-stats">
+              <div class="story-stat">
+                <strong>100%</strong>
+                <span>Ingredientes de temporada</span>
+              </div>
+              <div class="story-stat">
+                <strong>+8</strong>
+                <span>Años de trayectoria</span>
+              </div>
+              <div class="story-stat">
+                <strong>CDMX</strong>
+                <span>Hecho en casa, todos los días</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVACIONES -->
+    <section class="newsletter">
+      <div class="container newsletter-inner" data-reveal-group>
+        <p class="eyebrow">Reservaciones</p>
+        <h2>Aparta tu mesa en Milpa</h2>
+        <p class="lede">Cuéntanos fecha y número de personas y te confirmamos por WhatsApp o correo.</p>
+        <form class="newsletter-form" onsubmit="return false">
+          <input type="date" aria-label="Fecha" required />
+          <input type="number" min="1" max="20" placeholder="Personas" aria-label="Número de personas" required />
+          <button class="btn btn-primary" type="submit">Reservar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Milpa</p>
+        <p class="footer-tagline">Cocina mexicana de raíz. De la milpa a la mesa, todos los días.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navegación</p>
+        <nav class="footer-links">
+          <a href="./menu.html">Menú</a>
+          <a href="./contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Síguenos</p>
+        <nav class="footer-links">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-note">&copy; 2026 Milpa.</p>
+      <p class="footer-note">Hecho con maíz, fuego y paciencia en México.</p>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL (compartido) -->
+  <div class="product-modal" id="product-modal" data-open="false">
+    <div class="product-modal-panel">
+      <button class="product-modal-close" type="button" aria-label="Cerrar">&times;</button>
+      <div class="product-modal-media">
+        <div class="product-modal-slide is-active">
+          <img src="" alt="" />
+        </div>
+        <div class="product-modal-slide">
+          <img src="" alt="" />
+        </div>
+        <p class="product-modal-caption"></p>
+        <div class="product-modal-dots">
+          <button class="product-modal-dot is-active" type="button" aria-label="Foto del platillo"></button>
+          <button class="product-modal-dot" type="button" aria-label="Ingrediente de temporada"></button>
+        </div>
+      </div>
+      <div class="product-modal-body">
+        <p class="product-modal-eyebrow">Milpa</p>
+        <h3 class="product-modal-name"></h3>
+        <p class="product-modal-price"></p>
+        <p class="product-modal-desc"></p>
+        <a class="btn btn-primary product-modal-cta" href="#">Reservar mesa</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
