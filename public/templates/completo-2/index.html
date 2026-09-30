@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Volt &middot; Creador de Contenido</title>
+  <meta name="description" content="Media kit de Bruno Volt: sets en vivo, colaboraciones de marca para creadores de contenido nocturno." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800;900&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-D72OTQBU.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DmDuqHaY.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Bruno Volt</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#portafolio">Portafolio</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">DJ &middot; Productor Musical &middot; Creador de Contenido &middot; Cultura Nocturna</p>
+          <h1>Bruno Volt</h1>
+          <p class="hero-subtitle">
+            Mezclo sets en vivo, produzco musica electronica y cuento la noche
+            desde adentro: clubes, festivales y la energia que se siente en la
+            pista. Para las marcas, eso significa contenido que suena tan bien
+            como se ve, no un anuncio mas entre canciones.
+          </p>
+        </div>
+        <!--
+          Tier "Completo": foto de Unsplash dentro de un marco con esquinas
+          redondeadas y un borde/sombra en los acentos electricos (cobalto +
+          glow magenta) en vez de un borde blanco liso -- mismo patron del
+          resto del catalogo (marco + ligera rotacion), llevado a la paleta
+          bold de este demo. Vive fuera de [data-reveal-group] a proposito:
+          .hero-photo es su propio target de scroll-reveal (fade +
+          translateY), y .hero-photo-frame lleva el rotate/sombra estaticos
+          para que ambos transforms no compitan en el mismo elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1683128001135-277a32155c51?auto=format&fit=crop&w=1200&q=80"
+              alt="Bruno Volt"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section class="portfolio" id="portafolio">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Portafolio</p>
+          <h2>Marcas y sets en accion</h2>
+          <p class="lede">
+            Desde un unboxing de equipo hasta un festival completo: se
+            encontrar el momento que hace que una marca se sienta parte de la
+            noche, no una cortada comercial.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de contenido">
+          <li class="filter-chip">Sets en vivo</li>
+          <li class="filter-chip">Festival</li>
+          <li class="filter-chip">Backstage</li>
+          <li class="filter-chip">Tutorial</li>
+          <li class="filter-chip">Colaboracion</li>
+          <li class="filter-chip">Detras de camaras</li>
+        </ul>
+
+        <!--
+          Tarjetas con foto estatica + boton de "play" con estilo de
+          miniatura de video (sin video real detras): ningun
+          data-video-src/data-video-id, asi que video-embed.js no carga
+          nada al hacer clic -- ver comentario en ese archivo.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="sets">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1506485854521-3e13d857db0b?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Set en vivo: Club Prisma">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="tutorial">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1755508159006-d93494f2ee4c?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Como armo mi setlist">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="festival">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1574155267225-3b5423dd45d9?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Headliner en Ultravioleta Fest">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboracion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1642784353476-d226d8d617b3?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Unboxing: nuevo mixer">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1709649246219-220dfca6f75a?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Antes de abrir el set">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="detras">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1573247373996-cea1f3e6adf6?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Mis discos favoritos del mes">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1743203559734-b6ac14e5e0a1?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Backstage en Club Prisma">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1541126274323-dbac58d14741?auto=format&fit=crop&w=1200&q=80" alt="Bruno Volt mezclando en vivo" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>Mezclo, produzco y comparto: asi soy yo</h2>
+            <p>
+              Soy Bruno Volt, DJ, productor musical y voz detras de Radio
+              Volt. Me mueve el sonido que conecta a un cuarto lleno de
+              desconocidos, los graves que se sienten en el pecho y las
+              noches que se quedan grabadas en la memoria.
+            </p>
+            <p>
+              A traves de Radio Volt uno mezcla, cultura de club y
+              conversaciones sobre la escena electronica en contenido que
+              invita a moverte, sentir y perder la nocion del tiempo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marcas">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">NEON RIOT</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">BASSHAUS</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">CLUB PRISMA</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">SUBSONICA</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">ULTRAVIOLETA</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">PULSO FEST</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la colaboracion con Ultravioleta Fest</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1760092189954-5b2f6eb3ca88?auto=format&fit=crop&w=500&q=80" alt="Multitud con las manos arriba durante el festival Ultravioleta" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1760966362386-e1012dbc3657?auto=format&fit=crop&w=500&q=80" alt="Escenario del festival Ultravioleta con luces rosas" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1714972383570-44ddc9738355?auto=format&fit=crop&w=500&q=80" alt="Pista de baile durante la colaboracion con Ultravioleta Fest" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DJ A DOMICILIO -->
+    <section class="events" id="eventos">
+      <div class="container events-grid">
+        <div class="events-copy" data-reveal-group>
+          <p class="eyebrow">DJ a domicilio</p>
+          <h2 class="sr-only">Bruno Volt &mdash; DJ a domicilio</h2>
+          <p class="events-lockup">
+            <span>Bruno Volt</span>
+            DJ a domicilio
+          </p>
+          <p class="lede">
+            Ademas de crear contenido, llevo la fiesta a donde tu estes: sets
+            a la medida para bodas, cumpleanos, aperturas y eventos privados,
+            con el mismo cuidado que le pongo a un festival.
+          </p>
+          <div class="events-actions">
+            <a class="btn btn-primary" href="#contacto">Agenda tu evento</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Instagram @renata.volt
+            </a>
+          </div>
+        </div>
+        <div class="events-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1714972383570-44ddc9738355?auto=format&fit=crop&w=900&q=80" alt="Pista de baile en un evento privado" loading="lazy" />
+        </div>
+      </div>
+
+      <p class="events-videos-label">Asi armo un evento privado</p>
+      <div class="events-videos" data-reveal-group>
+        <div class="review-item" data-category="eventos">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1709649246219-220dfca6f75a?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Como armo un set para bodas">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="eventos">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1573247373996-cea1f3e6adf6?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Setup antes del evento">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="eventos">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1755508159006-d93494f2ee4c?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Lo que pido antes de cotizar">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Formas de colaborar</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Set 2 horas</p>
+            <ul class="pricing-list">
+              <li>Evento privado hasta 60 personas</li>
+            </ul>
+            <p class="pricing-price">$4,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Set 4 horas</p>
+            <ul class="pricing-list">
+              <li>Evento privado</li>
+              <li>Incluye equipo de sonido basico</li>
+            </ul>
+            <p class="pricing-price">$7,800 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Boda completa</p>
+            <ul class="pricing-list">
+              <li>Ceremonia + recepcion</li>
+              <li>Hasta 150 invitados</li>
+              <li>Equipo e iluminacion incluidos</li>
+            </ul>
+            <p class="pricing-price">$12,000 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Fiesta corporativa</p>
+            <ul class="pricing-list">
+              <li>3 horas</li>
+              <li>Branding personalizado en pantalla</li>
+            </ul>
+            <p class="pricing-price">$9,500 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Colaboramos?</h2>
+        <p class="lede">
+          Si tu marca o tu evento buscan energia real,
+          <strong>no un anuncio mas entre canciones</strong>, hablemos.
+          Reviso Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Escuchame en Spotify
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Bruno Volt. Hecho con carino.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Spotify</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

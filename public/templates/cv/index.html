@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofía Cadí &middot; Literatura, arte y conversaciones</title>
+  <meta name="description" content="El universo de Sofía Cadí: literatura, arte e ideas, el podcast Hablando con Sofía, terapia holística y colaboraciones con marcas." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Italiana&family=Work+Sans:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-YhEgfDw8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DHoVfPmt.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Sofía Cadí</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#contenido">Contenido</a>
+        <a href="#hablando">Hablando con Sofia</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#terapias">Terapias</a>
+        <a href="#colaboraciones">Colaboraciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!--
+      ===========================================================
+      1. INICIO / ESENCIA
+      ===========================================================
+      Portada editorial, no comercial: nombre como logotipo, una
+      linea de disciplinas y dos frases. Ningun precio, paquete ni
+      formulario aparece aqui a proposito -- el unico CTA es un
+      "Explorar" discreto (link de texto, no boton solido) hacia el
+      siguiente bloque.
+    -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <h1>Sofía Cadí</h1>
+          <p class="hero-disciplines">Literatura &middot; Arte &middot; Podcaster &middot; Lifestyle &middot; Creadora de contenido</p>
+          <p class="hero-statement">
+            Una mirada curiosa sobre los libros, el arte, las ideas y todo aquello
+            que nos hace humanos.
+          </p>
+          <a class="hero-explore" href="#sobre-mi">
+            <span>Explorar</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6" /></svg>
+          </a>
+        </div>
+        <!-- Recorte sin fondo: entra deslizandose de izquierda a derecha por
+             encima del texto y se detiene en su propia columna (tercio
+             derecho). hero-cutout es hermano de hero-copy, no hijo, para que
+             scroll-reveal.js no le aplique su propia animacion de fade. -->
+        <div class="hero-cutout" aria-hidden="true">
+          <div class="hero-cutout-inner">
+            <img src="./assets/hero-cutout-CTscoMoz.png" alt="" width="250" height="417" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      1b. SOBRE MI  (cierre del bloque inicial)
+      ===========================================================
+      Va pegado al Hero, sin romper la narrativa: primero "quien es
+      Sofia", y solo despues empieza el contenido. El retrato en
+      blanco y negro es el gesto mas editorial del sitio.
+    -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="./assets/profile-D2xYeBfV.jpg" alt="Retrato de Sofía Cadí" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <p><strong>Soy Sofía Cadí.</strong></p>
+            <p>
+              Me mueven los libros, el arte, las ideas, la introspección y esas
+              experiencias que nos dejan pensando incluso después de que terminan.
+            </p>
+            <p>
+              Creo contenido que no solo busca entretener, sino provocar algo:
+              <em>una pregunta, una emoción, una conversación</em>.
+            </p>
+            <p>
+              A través de mis proyectos exploro distintas formas de mirar el mundo
+              y de entendernos a nosotros mismos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      2. CONTENIDO INSPIRACIONAL
+      ===========================================================
+      Universo creativo y cultural: literatura, arte, lifestyle.
+      La foto del librero ancla la seccion como bloque editorial.
+      Sin chips de categoria (Unboxing/GRWM/...): esa tira leia como
+      catalogo de servicios, justo lo contrario al tono buscado.
+    -->
+    <section class="content" id="contenido">
+      <div class="container">
+        <div class="editorial-head" data-reveal-group>
+          <div class="editorial-head-copy">
+            <p class="eyebrow eyebrow--straight">Contenido inspiracional</p>
+            <p class="section-tagline">Literatura &middot; Reflexión &middot; Motivación &middot; Lifestyle</p>
+            <p class="lede">
+              <strong>Un espacio para hablar de libros, ideas, experiencias y pequeñas
+              cosas de la vida</strong> que nos invitan a mirar el mundo
+              <em>desde otra perspectiva</em>.
+            </p>
+          </div>
+          <figure class="editorial-head-photo">
+            <img src="./assets/terapia-lectura-Cp3jeRGw.jpg" alt="Sofía Cadí frente a un librero" loading="lazy" />
+          </figure>
+        </div>
+
+        <!--
+          data-reveal (toda la tira como una unidad) y NO
+          data-reveal-group: ahora que .reel-grid es scroll horizontal
+          (no cuadricula), cada .reel con su propio observer nunca
+          intersecta si empieza fuera de la vista horizontal recortada
+          por el overflow -- mismo bug que ya se corrigio en
+          .podcast-carousel. Ver esa nota para el detalle completo.
+        -->
+        <div class="reel-grid" data-reveal>
+          <!-- "Reflexion" reusa una de las 4 palabras del propio
+               section-tagline de arriba (Literatura · Reflexion ·
+               Motivacion · Lifestyle), asi la etiqueta no inventa un
+               tema nuevo fuera del vocabulario ya establecido aqui. -->
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/video4.mp4">
+              <img class="video-embed-thumb" src="./assets/video4-thumb-Cdubo3yP.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Reflexión">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Reflexión</figcaption>
+          </figure>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/video2.mp4">
+              <img class="video-embed-thumb" src="./assets/video2-thumb-DV7sLDe8.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Literatura">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Literatura</figcaption>
+          </figure>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/video3.mp4">
+              <img class="video-embed-thumb" src="./assets/video3-thumb-BpvnKiw4.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Arte y lectura">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Arte y lectura</figcaption>
+          </figure>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/resena-6.mp4">
+              <img class="video-embed-thumb" src="./assets/resena-6-thumb-Bpx-a8Cl.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Motivación">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Motivación</figcaption>
+          </figure>
+          <!-- Movido aqui desde Colaboraciones (antes vivia en el bloque
+               "Contenido para marcas", ya retirado): sigue siendo contenido
+               de Sofia frente a camara, asi que encaja igual de bien como
+               cuarta muestra del universo inspiracional. -->
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/resena-1.mov">
+              <img class="video-embed-thumb" src="./assets/resena-1-thumb-CGsWZ5sM.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Literatura">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Literatura</figcaption>
+          </figure>
+        </div>
+
+        <!-- Instagram aparece aqui por primera vez (no en el Hero ni solo al
+             final): es la extension natural de este bloque de contenido. -->
+        <div class="section-cta" data-reveal>
+          <a class="link-cta" href="https://www.instagram.com/sofia.cadi_/" target="_blank" rel="noopener">
+            <span>Ver más contenido en Instagram</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      3. HABLANDO CON SOFIA  (reels / emociones)
+      ===========================================================
+      Misma persona, otra expresion: aqui vive lo emocional e
+      introspectivo, separado a proposito de los reels de literatura
+      de arriba. Se distingue con fondo tintado y titulo en grande,
+      no con otra marca -- debe leerse como otra cara del mismo
+      universo, no como otra pagina.
+    -->
+    <section class="feelings" id="hablando">
+      <div class="container">
+        <div class="feelings-head" data-reveal-group>
+          <p class="eyebrow">Hablando con Sofía</p>
+          <h2 class="feelings-title">Palabras que se sienten</h2>
+          <p class="section-tagline">Emociones &middot; Introspección &middot; Conexión</p>
+          <p class="lede">
+            Conversaciones y reflexiones sobre aquello que sentimos, pensamos y
+            vivimos, porque a veces entender lo que nos pasa también es una forma
+            de empezar a transformarlo.
+          </p>
+        </div>
+
+        <!-- data-reveal (misma razon que el reel-grid de Contenido de arriba). -->
+        <div class="reel-grid" data-reveal>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/resena-7.mp4">
+              <img class="video-embed-thumb" src="./assets/resena-7-thumb-DKTrw_s4.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Relaciones">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Relaciones</figcaption>
+          </figure>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/video1.mp4">
+              <img class="video-embed-thumb" src="./assets/video1-thumb-B-b06i3L.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Introspección">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Introspección</figcaption>
+          </figure>
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/resena-4.mp4">
+              <img class="video-embed-thumb" src="./assets/resena-4-thumb-svWPgSnJ.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Autoconocimiento">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Autoconocimiento</figcaption>
+          </figure>
+          <!-- Movido aqui desde Terapias (antes vivia solo en "Asi hablo de
+               esto", ahora retirada): sigue siendo un reel sobre bienestar,
+               asi que encaja en el mismo universo emocional de esta seccion. -->
+          <figure class="reel">
+            <div class="video-embed" data-provider="local" data-video-src="./videos/resena-5.mp4">
+              <img class="video-embed-thumb" src="./assets/resena-5-thumb-4tEtttUl.png" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Bienestar">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver reel</span>
+              </button>
+            </div>
+            <figcaption class="reel-caption">Bienestar</figcaption>
+          </figure>
+        </div>
+
+        <!-- Puente narrativo hacia las dos secciones siguientes, sin
+             convertir este bloque en venta de podcast ni de terapia. -->
+        <p class="feelings-bridge" data-reveal>
+          Este universo también se extiende a mi podcast y a mis sesiones de
+          terapia holística.
+        </p>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      4. PODCAST
+      ===========================================================
+      Extension natural de "Hablando con Sofia", pero proyecto
+      independiente. La frase principal sube a titulo de la seccion
+      (antes iba enterrada dentro del parrafo) para que el bloque
+      venda la IDEA del podcast.
+    -->
+    <section class="podcast" id="podcast">
+      <div class="container">
+        <div class="podcast-head" data-reveal-group>
+          <p class="eyebrow">Podcast</p>
+          <p class="podcast-show">Hablando con Sofía</p>
+          <h2 class="podcast-phrase">El tipo de introspección que no cabe en un reel.</h2>
+          <p class="lede">
+            Conversaciones para detenernos un momento y pensar quiénes somos, qué
+            nos mueve, qué estamos aprendiendo y qué decidimos dejar atrás.
+          </p>
+        </div>
+
+        <div class="podcast-layout">
+          <!--
+            Cada episodio se queda como portada + boton hasta que le dan
+            clic -- asi el gesto de swipe nunca se lo roba un iframe de
+            Spotify que todavia no se ha cargado. Al hacer clic se carga
+            el reproductor real.
+          -->
+          <!--
+            data-reveal (todo el carrusel como una unidad) y NO
+            data-reveal-group: con el group, cada .podcast-slide recibe
+            su propio observer, y los episodios que empiezan fuera de
+            vista horizontal (recortados por el overflow del carrusel)
+            nunca llegan a intersectar, asi que se quedaban en opacity:0
+            para siempre. En mobile eso dejaba 3 de 4 episodios en blanco
+            al deslizar.
+          -->
+          <div class="podcast-carousel" data-reveal>
+            <div class="podcast-slide" data-episode-id="6tsuGpCTSM0tsEMtjAOfLJ">
+              <img class="podcast-slide-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f44d666edd8029a38ced6e635" alt="" />
+              <div class="podcast-slide-scrim" aria-hidden="true"></div>
+              <button class="podcast-slide-play" type="button" data-title="El enemigo en el espejo">
+                <span class="podcast-slide-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="podcast-slide-title">El enemigo en el espejo</span>
+              </button>
+            </div>
+            <div class="podcast-slide" data-episode-id="4uQoYl4VX3tYdq99KTuRWJ">
+              <img class="podcast-slide-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f44d666edd8029a38ced6e635" alt="" />
+              <div class="podcast-slide-scrim" aria-hidden="true"></div>
+              <button class="podcast-slide-play" type="button" data-title="Cómo tomar las mejores decisiones sin morir en el intento">
+                <span class="podcast-slide-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="podcast-slide-title">Cómo tomar las mejores decisiones sin morir en el intento</span>
+              </button>
+            </div>
+            <div class="podcast-slide" data-episode-id="0m3HiwUNsJ4P99uiRgiq8t">
+              <img class="podcast-slide-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f44d666edd8029a38ced6e635" alt="" />
+              <div class="podcast-slide-scrim" aria-hidden="true"></div>
+              <button class="podcast-slide-play" type="button" data-title="¿Álter ego?">
+                <span class="podcast-slide-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="podcast-slide-title">¿Álter ego?</span>
+              </button>
+            </div>
+            <div class="podcast-slide" data-episode-id="7fr7X9Gp8ls2siRVwis2kw">
+              <img class="podcast-slide-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67656300005f1f44d666edd8029a38ced6e635" alt="" />
+              <div class="podcast-slide-scrim" aria-hidden="true"></div>
+              <button class="podcast-slide-play" type="button" data-title="¿La muerte?">
+                <span class="podcast-slide-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="podcast-slide-title">¿La muerte?</span>
+              </button>
+            </div>
+          </div>
+          <button class="podcast-carousel-next" type="button" aria-label="Ver siguiente episodio">
+            <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg>
+          </button>
+        </div>
+
+        <div class="podcast-cta" data-reveal>
+          <a
+            class="btn btn-primary"
+            href="https://open.spotify.com/show/2ZaW3qEzNEmXtNtnpMbXHK"
+            target="_blank"
+            rel="noopener"
+          >
+            Escuchar en Spotify
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      5. TERAPIA HOLISTICA
+      ===========================================================
+      La dimension de acompanamiento del mismo universo. Los precios
+      de terapia viven aqui (antes estaban mezclados con los paquetes
+      de marca, en una sola seccion de "Paquetes" al final) y se
+      presentan como lista editorial con linea de puntos, no como
+      tarjetas de tienda.
+    -->
+    <section class="therapy" id="terapias">
+      <div class="container">
+        <div class="therapy-intro" data-reveal-group>
+          <div class="therapy-intro-copy">
+            <p class="eyebrow eyebrow--straight">Terapia holística</p>
+            <h2 class="sr-only">Hablando con Sofía &mdash; Terapia holística</h2>
+            <div class="therapy-lockup-plate">
+              <img
+                class="therapy-lockup"
+                src="./assets/terapias-lockup-CMv4iTXX.png"
+                alt="Hablando con Sofía &mdash; Terapia holística"
+              />
+            </div>
+            <p class="lede">
+              Además de crear contenido y conversar sobre bienestar, acompaño
+              procesos personales desde una mirada holística, consciente y cercana.
+            </p>
+            <p class="therapy-claim">Un espacio para detenerte, escucharte y reconectar contigo.</p>
+          </div>
+          <figure class="therapy-photo">
+            <img src="./assets/terapia-collage-C8nCyYtX.jpg" alt="Momentos de las ceremonias de terapia holística" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="therapy-services" data-reveal-group>
+          <p class="block-label">Sesiones y ceremonias</p>
+          <ul class="service-list">
+            <li class="service-row">
+              <div class="service-info">
+                <p class="service-name">Individual</p>
+                <p class="service-detail">60 minutos</p>
+              </div>
+              <p class="service-price">$400 <span>MXN</span></p>
+            </li>
+            <li class="service-row">
+              <div class="service-info">
+                <p class="service-name">Bienestar infantil</p>
+                <p class="service-detail">50 minutos</p>
+              </div>
+              <p class="service-price">$300 <span>MXN</span></p>
+            </li>
+            <li class="service-row">
+              <div class="service-info">
+                <p class="service-name">Ceremonia de cumpleaños</p>
+                <p class="service-detail">3 horas &middot; 20 minutos de coffee break &middot; Para 15 personas</p>
+              </div>
+              <p class="service-price">$5,000 <span>MXN</span></p>
+            </li>
+            <li class="service-row">
+              <div class="service-info">
+                <p class="service-name">Ceremonia de bienvenida de maternidad</p>
+                <p class="service-detail">3 horas &middot; 20 minutos de coffee break &middot; Para 15 personas</p>
+              </div>
+              <p class="service-price">$5,000 <span>MXN</span></p>
+            </li>
+          </ul>
+          <div class="therapy-actions">
+            <a class="btn btn-primary btn-invite" href="https://www.instagram.com/hablandowsofia/" target="_blank" rel="noopener">
+              <span class="btn-invite-label">Agendar una sesión</span>
+              <span class="btn-invite-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </a>
+            <a class="link-cta link-cta--quiet" href="https://www.instagram.com/hablandowsofia/" target="_blank" rel="noopener">
+              <span>@hablandowsofia</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      6. COLABORACIONES / UGC
+      ===========================================================
+      Llega hasta aqui a proposito: el visitante ya conocio el
+      universo antes de ver un solo precio. Reune lo que antes vivia
+      separado en "Marcas" (arriba, a mitad de pagina) y "Paquetes"
+      (al final).
+    -->
+    <section class="collabs" id="colaboraciones">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Colaboraciones</p>
+          <p class="lede">
+            <strong>Colaboro con marcas que tienen algo que contar</strong> y buscan
+            comunicarlo de una manera <em>auténtica, estética y cercana</em>.
+          </p>
+        </div>
+
+        <!--
+          Formato fijo de cada colaboración -- reutiliza este bloque tal cual
+          para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark (letras + el
+          elemento gráfico que las forma, ej. la rayita de Dreams o la
+          estrella de Freak & Chic) en negro sólido sobre fondo
+          transparente -- nada de fondo, nube, tagline ni decoración
+          suelta -- y úsalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavía, usa el nombre en texto (mismo formato de
+          siempre: mayúsculas, sin arrobas ni sufijos numéricos):
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Carrusel automático (src/js/components/brand-marquee.js): el
+          track de abajo duplica el set de marcas una vez (segundo
+          bloque, aria-hidden) para poder loopear sin salto visible y
+          para tener contenido de sobra al arrastrar en cualquier
+          dirección. Se detiene al pasar el mouse o al mantener
+          presionado un logo (touch), y se puede arrastrar para
+          adelantar/atrasar -- ver ese archivo. Si agregas o quitas una
+          marca, edita AMBOS sets para que sigan siendo idénticos.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="https://www.instagram.com/dreeams_73/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--dreams" src="./assets/dreams-mark-BxGRAMu6.png" alt="Dreams" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/freak.n.chic/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--freak" src="./assets/freak-mark-ossc59mm.png" alt="Freak &amp; Chic" />
+            </a>
+            <a class="brand-item brand-item--stacked" href="https://www.instagram.com/parrillaelprincipe/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--principe" src="./assets/principe-mark-CbLQf06i.png" alt="El Príncipe" />
+              <span class="brand-subtitle">Restaurante</span>
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/sakurametepec/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--sakura" src="./assets/sakura-mark-r-M06tMu.png" alt="Sakura Jardín y Salón" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/sahara_nails_spa/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--sahara" src="./assets/sahara-mark-BOu1s96s.png" alt="Sahara Nails &amp; Hair Spa" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/emocionespodcast/" target="_blank" rel="noopener">
+              <img class="brand-mark brand-mark--emociones" src="./assets/emociones-mark-BcwyoBzM.png" alt="EmociónEs Podcast" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/dreeams_73/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--dreams" src="./assets/dreams-mark-BxGRAMu6.png" alt="" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/freak.n.chic/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--freak" src="./assets/freak-mark-ossc59mm.png" alt="" />
+            </a>
+            <a class="brand-item brand-item--stacked" href="https://www.instagram.com/parrillaelprincipe/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--principe" src="./assets/principe-mark-CbLQf06i.png" alt="" />
+              <span class="brand-subtitle">Restaurante</span>
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/sakurametepec/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--sakura" src="./assets/sakura-mark-r-M06tMu.png" alt="" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/sahara_nails_spa/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--sahara" src="./assets/sahara-mark-BOu1s96s.png" alt="" />
+            </a>
+            <a class="brand-item" href="https://www.instagram.com/emocionespodcast/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <img class="brand-mark brand-mark--emociones" src="./assets/emociones-mark-BcwyoBzM.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <!--
+          Fotos reales detras de camaras de varias colaboraciones y
+          entrevistas -- varias de estas no son retrato solo de ella (sale
+          acompanada, o el protagonista es el helicoptero/salon/producto),
+          por eso viven aqui como evidencia de las colaboraciones en vez de
+          en Sobre mi. Cada tarjeta lleva su propio pie de foto (nombre de
+          la colaboracion/entrevista); si agregas una nueva, sube la foto a
+          src/assets/photos/, duplica un <figure> y dale la siguiente letra
+          de modificador (brand-bts-photo--h, --i...) para que herede una
+          rotacion distinta a la de sus vecinas.
+        -->
+        <div class="brand-bts">
+          <p class="block-label">Contenido para marcas</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="./assets/lifestyle-13-wB99FDju.jpg" alt="Dinámica Sakura" loading="lazy" />
+              <figcaption class="brand-bts-caption">Dinámica Sakura</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="./assets/lifestyle-1-CgER7R69.jpg" alt="Entrevista Yetus" loading="lazy" />
+              <figcaption class="brand-bts-caption">Entrevista Yetus</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="./assets/lifestyle-8-D9c_oiuK.jpg" alt="Colaboración Freak N Chic" loading="lazy" />
+              <figcaption class="brand-bts-caption">Colaboración Freak N Chic</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--d">
+              <img src="./assets/salon-tratamiento-Bde5C_9Q.jpg" alt="Colaboración Sahara" loading="lazy" />
+              <figcaption class="brand-bts-caption">Colaboración Sahara</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--e">
+              <img src="./assets/salon-spa-sahara-BHVzGjYv.jpg" alt="Colaboración Sahara" loading="lazy" />
+              <figcaption class="brand-bts-caption">Colaboración Sahara</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--f">
+              <img src="./assets/entrevista-luis-enrique-1-qpnx_H6u.jpg" alt="Entrevista Luis Enrique Duval" loading="lazy" />
+              <figcaption class="brand-bts-caption">Entrevista Luis Enrique Duval</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--g">
+              <img src="./assets/entrevista-luis-enrique-2-C61SdOd1.jpg" alt="Entrevista Luis Enrique Duval" loading="lazy" />
+              <figcaption class="brand-bts-caption">Entrevista Luis Enrique Duval</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="packages" data-reveal-group>
+          <p class="block-label">Formas de trabajar juntas</p>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <p class="pricing-name">Básico</p>
+              <ul class="pricing-list">
+                <li>1 reel profesional</li>
+                <li>2 historias en Instagram</li>
+                <li>Mención de ubicación</li>
+                <li>Etiqueta de colaboración en redes sociales</li>
+                <li>Entrega de material</li>
+              </ul>
+              <p class="pricing-price">$1,000 <span>MXN</span></p>
+            </article>
+            <article class="pricing-card">
+              <p class="pricing-name">Estándar</p>
+              <ul class="pricing-list">
+                <li>2 reels profesionales</li>
+                <li>4 historias en Instagram</li>
+                <li>1 publicación tipo carrusel con etiqueta de colaboración</li>
+                <li>Código de descuento autorizado en la publicación</li>
+                <li>Mención de ubicación</li>
+                <li>Entrega de material</li>
+              </ul>
+              <p class="pricing-price">$2,100 <span>MXN</span></p>
+            </article>
+            <article class="pricing-card">
+              <p class="pricing-name">Premium</p>
+              <ul class="pricing-list">
+                <li>2 reels profesionales</li>
+                <li>6 historias</li>
+                <li>1 publicación tipo carrusel con etiqueta de colaboración</li>
+                <li>Código de descuento autorizado en la publicación</li>
+                <li>1 reel de experiencia completa</li>
+                <li>1 video de YouTube</li>
+                <li>Entrega de material</li>
+              </ul>
+              <p class="pricing-price">$3,000 <span>MXN</span></p>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a class="btn btn-primary btn-invite" href="https://www.instagram.com/sofia.cadi_/" target="_blank" rel="noopener">
+            <span class="btn-invite-label">Colaborar con Sofía</span>
+            <span class="btn-invite-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===========================================================
+      7. CIERRE / CONTACTO
+      ===========================================================
+      Cuatro caminos claros, uno por cada cara del universo. Cada
+      enlace ya aparecio antes en su propia seccion -- aqui solo se
+      reunen para el que bajo hasta el final.
+    -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2 class="contact-title">¿Hablamos?</h2>
+        <p class="lede">
+          Si tienes una idea, una historia que contar o simplemente quieres formar
+          parte de este universo, escríbeme.
+        </p>
+
+        <ul class="contact-paths">
+          <!-- Terapias y Colaboraciones llevan el verde del logo
+               (--logo-green); Instagram y Spotify abajo se quedan con el
+               color original del recuadro (.contact-path--accent no las
+               toca a proposito). -->
+          <li class="contact-path contact-path--accent">
+            <a href="https://www.instagram.com/hablandowsofia/" target="_blank" rel="noopener">
+              <span class="contact-path-label">Terapias</span>
+              <span class="contact-path-action">Agenda una sesión</span>
+            </a>
+          </li>
+          <li class="contact-path contact-path--accent">
+            <a href="https://www.instagram.com/sofia.cadi_/" target="_blank" rel="noopener">
+              <span class="contact-path-label">Colaboraciones</span>
+              <span class="contact-path-action">Colabora conmigo</span>
+            </a>
+          </li>
+          <li class="contact-path">
+            <a href="https://www.instagram.com/sofia.cadi_/" target="_blank" rel="noopener">
+              <span class="contact-path-label">Instagram</span>
+              <span class="contact-path-action">Sígueme en Instagram</span>
+            </a>
+          </li>
+          <li class="contact-path">
+            <a href="https://open.spotify.com/show/2ZaW3qEzNEmXtNtnpMbXHK" target="_blank" rel="noopener">
+              <span class="contact-path-label">Spotify</span>
+              <span class="contact-path-action">Escúchame en Spotify</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Sofía Cadí. Hecho con cariño.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="https://www.instagram.com/sofia.cadi_/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@sofia.cadi_" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://open.spotify.com/show/2ZaW3qEzNEmXtNtnpMbXHK" target="_blank" rel="noopener">Spotify</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

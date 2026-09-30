@@ -7,18 +7,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin-bottom: var(--space-xl);
+  padding-block: var(--space-lg) var(--space-xl);
 }
 
 .filter-tab {
   appearance: none;
-  background: var(--surface);
+  background: none;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  padding: 10px 20px;
+  padding: 9px 18px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink-soft);
   cursor: pointer;
   transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
@@ -36,13 +36,13 @@
 }
 
 .catalog-group {
-  margin-bottom: var(--space-2xl);
+  padding-block: var(--space-2xl) var(--space-lg);
 }
 
 .catalog-group > h2 {
   font-family: var(--font-display);
   font-size: var(--text-3xl);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: var(--space-xs);
 }
 
@@ -52,30 +52,71 @@
   margin-bottom: var(--space-xl);
 }
 
+/*
+  Cada tier vive en su propia franja a todo lo ancho del viewport --
+  fondo tomado de --tag-*-band (un casi-negro con el tinte de la misma
+  familia de color que ya usa su card-tag), asi cada categoria se siente
+  como un cambio de escenario sin salirse de la paleta oscura general.
+  El "quiebre" fuera del .container centrado es puro CSS (margin/padding
+  con vw), sin tocar el HTML: el fondo llega a los bordes del viewport
+  pero el contenido interno sigue alineado al mismo ancho de siempre.
+*/
 .tier-block {
-  margin-bottom: var(--space-xl);
+  margin-inline: calc(50% - 50vw);
+  /* + var(--space-sm) al final: compensa el padding-inline propio de
+     .container (el ancestro que .tier-block esta rompiendo), que si no
+     el contenido interno quedaria ~16px mas pegado al borde que el
+     resto del sitio. */
+  padding-inline: calc(50vw - 50% + var(--space-sm));
+  padding-block: var(--space-xl);
 }
 
-.tier-block:last-child {
-  margin-bottom: 0;
+.tier-block + .tier-block {
+  border-top: 1px solid var(--line);
+}
+
+.tier-block[data-tier='basico'] {
+  background: var(--tag-basico-band);
+}
+
+.tier-block[data-tier='estandar'] {
+  background: var(--tag-estandar-band);
+}
+
+.tier-block[data-tier='completo'] {
+  background: var(--tag-completo-band);
+}
+
+.tier-block[data-tier='negocio'] {
+  background: var(--tag-negocio-band);
 }
 
 .tier-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .tier-head h3 {
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .tier-head .tier-price {
   font-size: var(--text-sm);
-  color: var(--ink-faint);
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.tier-note {
+  width: 100%;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  max-width: 70ch;
+  margin-bottom: var(--space-md);
 }
 
 .card-grid {
@@ -84,7 +125,18 @@
   gap: var(--space-md);
 }
 
+/*
+  .card es una "isla" clara sobre el fondo oscuro del tier -- redefine
+  --ink/--ink-soft/--ink-faint de vuelta a oscuro solo en su propio
+  scope (igual patron que .hero/.footer usan a la inversa en varias
+  plantillas del catalogo), asi las miniaturas reales se ven nitidas
+  sobre una superficie neutra y el titulo/descripcion adentro siguen
+  siendo legibles en tinta oscura sin tocar los tokens globales.
+*/
 .card {
+  --ink: #201d18;
+  --ink-soft: rgba(32, 29, 24, 0.66);
+  --ink-faint: rgba(32, 29, 24, 0.44);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -127,7 +179,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(20, 20, 31, 0.45);
+  background: rgba(33, 29, 24, 0.45);
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -190,7 +242,7 @@
 .card-title {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .card-desc {

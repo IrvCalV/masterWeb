@@ -1,41 +1,62 @@
 /*
   Design tokens para el catalogo (masterWeb). Paleta propia, distinta a
-  la de cualquiera de las plantillas que muestra -- este es el sitio
-  "tienda", no una plantilla mas, asi que se ve como una herramienta de
-  producto/marketplace: neutros fríos, acento indigo, tipografia
-  geometrica moderna.
+  la de cualquiera de las plantillas que muestra. Segunda pasada del
+  rediseño "simple pero elegante" -- dark mode: casi todo el shell (nav,
+  hero, encabezados de tier, footer) vive sobre --bg NEGRO PURO (no un
+  casi-negro con tinte calido) para que se vea "cool" en pantallas OLED
+  (los pixeles de #000 real se apagan, a diferencia de un gris muy
+  oscuro) con texto claro; las .card siguen siendo superficies CLARAS
+  ("islas" con la miniatura real de cada plantilla) para que las fotos
+  se vean nitidas sobre un fondo neutro en vez de flotar sobre negro --
+  por eso .card redefine --ink/--ink-soft/--ink-faint de vuelta a
+  oscuro solo en su propio scope (ver cards.css). Acento champan/dorado
+  para texto/CTAs; los fondos de seccion (*-band) NO usan ese dorado --
+  se probo mezclado con el bg y leia "cafe", asi que ahora son grises
+  neutros puros, sin tinte de color, solo variando cuan claros son.
+  Serif clasica (Playfair Display, sin cursiva) para titulos.
 */
 :root {
   /* --- Color --- */
-  --bg: #f6f6fb;
-  --surface: #ffffff;
-  --surface-alt: #eeeef7;
-  --ink: #14141f;
-  --ink-soft: rgba(20, 20, 31, 0.68);
-  --ink-faint: rgba(20, 20, 31, 0.46);
+  --bg: #000000;
+  --surface: #faf8f3;
+  --surface-alt: #efe8db;
+  --ink: #f3f0e9;
+  --ink-soft: rgba(243, 240, 233, 0.68);
+  --ink-faint: rgba(243, 240, 233, 0.46);
 
-  --accent: #6d5ef8;
-  --accent-strong: #5645e0;
-  --accent-dark: #3c2fae;
-  --on-accent: #ffffff;
+  --accent: #c9a25c;
+  --accent-strong: #ddbb7c;
+  --accent-dark: #8a6b2e;
+  --on-accent: #14120f;
 
-  --line: rgba(20, 20, 31, 0.1);
-  --line-strong: rgba(20, 20, 31, 0.18);
-  --shadow-soft: 0 24px 48px -28px rgba(20, 20, 31, 0.28);
-  --shadow-lift: 0 32px 64px -24px rgba(20, 20, 31, 0.38);
+  --line: rgba(243, 240, 233, 0.14);
+  --line-strong: rgba(243, 240, 233, 0.24);
+  --shadow-soft: 0 20px 44px -24px rgba(0, 0, 0, 0.55);
+  --shadow-lift: 0 30px 60px -22px rgba(0, 0, 0, 0.6);
 
-  /* Colores de las etiquetas de categoria -- una por tier/tipo */
+  /* Colores de las etiquetas de categoria -- una por tier/tipo. Sus
+     variantes *-bg siguen usandose para el chip claro dentro de la
+     card (verde/dorado/ciruela/azul, uno por tier, sin cambios). Los
+     *-band son grises neutros puros (sin tinte de ningun color, ni
+     verde/ciruela/azul de la primera version ni el dorado/cafe de la
+     segunda) que solo se aclaran un poco tier a tier -- la diferencia
+     entre secciones es de LUMINOSIDAD, no de tono, asi ninguna franja
+     compite en color con el negro puro de --bg ni entre si. */
   --tag-basico: #2f9e6b;
   --tag-basico-bg: #e4f6ed;
+  --tag-basico-band: #0a0a0a;
   --tag-estandar: #b8850a;
   --tag-estandar-bg: #faf0dc;
+  --tag-estandar-band: #131313;
   --tag-completo: #b5348a;
   --tag-completo-bg: #fbe6f3;
+  --tag-completo-band: #1c1c1c;
   --tag-negocio: #2d6fd6;
   --tag-negocio-bg: #e6eefc;
+  --tag-negocio-band: #262626;
 
   /* --- Type --- */
-  --font-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --text-xs: 0.75rem;
