@@ -300,6 +300,15 @@
     scroll-snap-type: x mandatory;
     scroll-padding-inline: var(--space-sm);
     padding-bottom: var(--space-xs);
+    /* Sin esto, un swipe que empieza sobre la rejilla con cualquier
+       componente vertical (dificil de evitar con el dedo) tambien
+       scrollea la pagina completa arriba/abajo al mismo tiempo -- el
+       navegador trata el gesto como ambiguo y hace las dos cosas.
+       touch-action:pan-x le dice que SOLO el eje horizontal es un gesto
+       nativo valido aqui, asi el vertical nunca se dispara desde dentro
+       de la rejilla (la pagina sigue scrolleando normal si el swipe
+       arranca fuera de ella). */
+    touch-action: pan-x;
   }
 
   .card-grid .card {
