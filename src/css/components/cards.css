@@ -152,11 +152,29 @@
     background 0.3s ease;
 }
 
-.card:hover,
 .card:focus-visible {
   transform: translateY(-6px);
   background: var(--surface-strong);
   box-shadow: var(--glass-highlight), var(--shadow-lift);
+}
+
+/*
+  :hover detras de (hover: hover): sin esto, Safari en iOS aplica
+  :hover "pegado" en el primer tap sobre cualquier elemento (un quirk
+  documentado, no un bug nuestro) -- eso disparaba la misma transition
+  de transform justo cuando el navegador arbitra si el gesto es el
+  pan-x del riel horizontal o scroll vertical de la pagina, colando
+  scroll vertical en movil igual que el problema que ya se arreglo mas
+  abajo para .is-touch-active. (hover: hover) solo es verdadero en
+  dispositivos con un puntero real (mouse/trackpad), nunca en touch puro
+  sin importar el quirk de iOS.
+*/
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-6px);
+    background: var(--surface-strong);
+    box-shadow: var(--glass-highlight), var(--shadow-lift);
+  }
 }
 
 .card-thumb {
@@ -174,8 +192,10 @@
   transition: transform 0.4s var(--ease-out-soft);
 }
 
-.card:hover .card-thumb img {
-  transform: scale(1.04);
+@media (hover: hover) {
+  .card:hover .card-thumb img {
+    transform: scale(1.04);
+  }
 }
 
 .card-thumb-scrim {
@@ -192,22 +212,37 @@
   pointer-events: none;
 }
 
-.card:hover .card-thumb-scrim {
-  opacity: 1;
+@media (hover: hover) {
+  .card:hover .card-thumb-scrim {
+    opacity: 1;
+  }
 }
 
 /*
   Equivalente tactil del :hover de arriba -- main.js agrega/quita esta
   clase en touchstart/touchend (sin preventDefault en ningun touch* para
-  no interferir con el scroll), asi un tap en movil muestra el mismo
-  "ligero aumento + Ver plantilla" que el mouse en desktop.
-*/
-.card.is-touch-active .card-thumb img {
-  transform: scale(1.04);
-}
+  no interferir con el scroll), asi un tap en una tablet/grid estatico
+  muestra el mismo "ligero aumento + Ver plantilla" que el mouse en
+  desktop.
 
-.card.is-touch-active .card-thumb-scrim {
-  opacity: 1;
+  Deliberadamente detras de min-width:641px: por debajo de eso .card-grid
+  es el riel horizontal con scroll-snap (ver el media query de abajo).
+  Ahi, el solo hecho de agregar .is-touch-active en touchstart dispara la
+  transition de .card-thumb img (scale) justo en el instante en que el
+  navegador todavia esta decidiendo si el gesto es el pan-x del riel o un
+  scroll vertical de la pagina -- esa animacion arrancando a mitad del
+  arbitraje de gesto es lo que colaba scroll vertical incluso con
+  touch-action:pan-x puesto. Sin el cambio de transform en ese instante,
+  el navegador bloquea el eje correctamente desde el primer pixel.
+*/
+@media (min-width: 641px) {
+  .card.is-touch-active .card-thumb img {
+    transform: scale(1.04);
+  }
+
+  .card.is-touch-active .card-thumb-scrim {
+    opacity: 1;
+  }
 }
 
 .card-thumb-scrim span {
@@ -297,6 +332,7 @@
     display: flex;
     grid-template-columns: unset;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: var(--space-sm);
     padding-bottom: var(--space-xs);
