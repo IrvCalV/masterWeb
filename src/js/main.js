@@ -26,6 +26,37 @@ function initCatalogFilter() {
   });
 }
 
+// Menu de hamburguesa en movil: el boton solo alterna .is-open en
+// nav-links y su propio aria-expanded (nav.css lee ese mismo atributo
+// para dibujar la X) -- en escritorio el media query de nav.css ignora
+// la clase por completo, asi que no hace falta sincronizar nada al
+// cambiar de ancho de pantalla. Cerrar al hacer click en un link es
+// necesario porque son anclas dentro de la misma pagina: sin esto el
+// panel se quedaria abierto tapando la seccion a la que acabas de saltar.
+function initMobileNav() {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+
+  function closeMenu() {
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  links.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+}
+
 // Visor en la misma pagina: intercepta el click en cada tarjeta, carga
 // esa plantilla en el iframe y muestra la capa -- nunca navega a otra
 // pestana ni recarga la pagina. El iframe se vacia al cerrar para que
@@ -166,6 +197,7 @@ function initTouchHoverPreview(selector) {
 }
 
 initCatalogFilter();
+initMobileNav();
 initTemplateViewer();
 initTouchHoverPreview('.card');
 initTouchHoverPreview('.package-card, .support-card');

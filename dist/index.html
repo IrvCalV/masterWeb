@@ -12,14 +12,19 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
   />
-  <script type="module" crossorigin src="./assets/index-CZIurxoN.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B2pgzq-G.css">
+  <script type="module" crossorigin src="./assets/index-BRLZUYHR.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CwSF6Y7v.css">
 </head>
 <body>
   <header class="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#top">MasterWeb <span>Catálogo</span></a>
-      <nav class="nav-links">
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
         <a href="#creadores">Creadores</a>
         <a href="#negocios">Negocios</a>
         <a href="#paquetes">Paquetes</a>
@@ -65,7 +70,7 @@
           <button class="filter-tab" data-filter="estandar" type="button">Estándar</button>
           <button class="filter-tab" data-filter="completo" type="button">Completo</button>
           <button class="filter-tab" data-filter="deluxe" type="button">Deluxe</button>
-          <button class="filter-tab" data-filter="negocio" type="button">Negocios</button>
+          <button class="filter-tab" data-filter="negocio" type="button">Empresarial</button>
         </div>
 
         <!-- CREADORES DE CONTENIDO -->
@@ -236,7 +241,7 @@
 
           <div class="tier-block" data-tier="negocio" id="tier-negocio">
             <div class="tier-head">
-              <h3>Negocios</h3>
+              <h3>Empresarial / Multipágina</h3>
               <span class="tier-price">Desde $6,000 – $10,000+ MXN</span>
             </div>
             <p class="tier-note">Sitio multi-página a la medida: catálogo, servicios, reservas y contacto. Hasta 35 fotos y 12 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
@@ -247,7 +252,7 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">SoArt · Bolsos de piel</h3>
                   <p class="card-desc">E-commerce de bolsos: catálogo, vista rápida de producto y colecciones por género.</p>
                 </div>
@@ -259,7 +264,7 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">Milpa · Restaurante</h3>
                   <p class="card-desc">Cocina mexicana de raíz: menú completo por categorías, reservaciones y ficha de contacto.</p>
                 </div>
@@ -271,7 +276,7 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">Lúmina · Clínica Dental</h3>
                   <p class="card-desc">Odontología y estética facial: catálogo de tratamientos, confianza/credenciales y agenda de citas.</p>
                 </div>
@@ -295,7 +300,7 @@
         <div class="package-grid">
           <a class="package-card" href="#tier-basico">
             <div class="package-head">
-              <h3>Inicial</h3>
+              <h3>Básico</h3>
               <span class="package-price">$1,500 <small>MXN</small></span>
             </div>
             <p class="package-desc">Landing sencilla basada en plantilla.</p>
@@ -304,7 +309,7 @@
 
           <a class="package-card" href="#tier-estandar">
             <div class="package-head">
-              <h3>Profesional</h3>
+              <h3>Estándar</h3>
               <span class="package-price">$2,400 <small>MXN</small></span>
             </div>
             <p class="package-desc">Más secciones, contenido y personalización.</p>
@@ -313,7 +318,7 @@
 
           <a class="package-card" href="#tier-completo">
             <div class="package-head">
-              <h3>Creador / Media Kit</h3>
+              <h3>Completo</h3>
               <span class="package-price">$4,000 <small>MXN</small></span>
             </div>
             <p class="package-desc">Portafolio, redes, contenido, videos, etc.</p>
@@ -322,7 +327,7 @@
 
           <a class="package-card" href="#tier-deluxe">
             <div class="package-head">
-              <h3>Premium</h3>
+              <h3>Deluxe</h3>
               <span class="package-price">$6,000 <small>MXN</small></span>
             </div>
             <p class="package-desc">Mayor personalización y sitio más completo.</p>

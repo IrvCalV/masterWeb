@@ -284,8 +284,26 @@
   }
 }
 
+/*
+  En movil, apilar las miniaturas una debajo de otra alargaba muchisimo
+  la pagina (cada tier ya es una franja de color completa) y empujaba
+  los precios de Paquetes muy abajo del scroll. En vez de 1 columna,
+  el grid se vuelve una fila horizontal con scroll-snap -- se ve una
+  tarjeta completa y el borde de la siguiente, asomando que hay mas.
+*/
 @media (max-width: 640px) {
   .card-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    grid-template-columns: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--space-sm);
+    padding-bottom: var(--space-xs);
+  }
+
+  .card-grid .card {
+    flex: 0 0 78%;
+    max-width: 300px;
+    scroll-snap-align: start;
   }
 }

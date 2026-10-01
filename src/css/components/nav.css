@@ -9,6 +9,7 @@
 }
 
 .nav-inner {
+  position: relative;
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: var(--space-sm);
@@ -64,30 +65,86 @@
   color: var(--accent-strong);
 }
 
-@media (max-width: 640px) {
-  .nav-links {
-    gap: var(--space-sm);
-  }
+/* Boton de menu -- oculto en escritorio, 3 barras que se convierten en
+   una X via CSS cuando main.js marca aria-expanded="true" (sin clase
+   aparte: el estado accesible y el estado visual son el mismo atributo). */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
 
-  .nav-links a {
-    font-size: var(--text-xs);
-  }
+.nav-toggle-bar {
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /*
-  4 links + marca ya no caben en una sola fila comoda en telefonos
-  angostos -- en vez de envolver (rompe la barra sticky a dos lineas) o
-  esconder enlaces, el propio nav-links se vuelve scrolleable
-  horizontalmente. No afecta el scroll vertical de la pagina.
+  4 links + marca ya no caben en una sola fila en telefonos angostos.
+  Un menu de hamburguesa reemplaza el intento anterior de achicar
+  texto/gap o volver el nav scrolleable -- esos parches seguian viendose
+  apretados; esto colapsa todo a un panel propio. El quiebre fuera de
+  .nav-inner (margin/padding con vw) es el mismo truco "full-bleed" que
+  ya usa .tier-block en cards.css, asi el panel cubre todo el ancho del
+  viewport en vez de quedar encogido al max-width centrado del nav.
 */
-@media (max-width: 420px) {
-  .nav-links {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
   }
 
-  .nav-links::-webkit-scrollbar {
+  .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-inline: calc(50% - 50vw);
+    padding-inline: calc(50vw - 50% + var(--space-sm));
+    padding-block: var(--space-xs);
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding-block: var(--space-sm);
+    border-top: 1px solid var(--line);
+    font-size: var(--text-base);
+  }
+
+  .nav-links a:first-child {
+    border-top: none;
   }
 }
