@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luna Vidal &middot; Cantautora y Creadora de Contenido</title>
+  <meta name="description" content="Media kit de Luna Vidal: musica, shows en vivo y colaboraciones de marca para redes sociales." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-ePqoMRw8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DjEgwnIC.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Luna Vidal</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#portafolio">Portafolio</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#shows">Shows</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">Cantautora &middot; Indie Pop &middot; Creadora de Contenido</p>
+          <h1>Luna Vidal</h1>
+          <p class="hero-subtitle">
+            Escribo canciones sobre lo que no se dice facil y las llevo del
+            cuarto de ensayo al escenario. Para las marcas, eso significa
+            contenido que suena a algo real, con el pulso de una artista en
+            gira, no un comercial con musica de fondo.
+          </p>
+        </div>
+        <!--
+          Tier "Completo" simplificado: en vez del recorte sin fondo de la
+          referencia (que requiere una foto real editada), aqui una foto de
+          Unsplash normal dentro de un marco con esquinas redondeadas,
+          borde y ligera rotacion -- misma sensacion editorial, sin
+          necesitar el recorte. Vive fuera de [data-reveal-group] a
+          proposito: .hero-photo es su propio target de scroll-reveal
+          (fade + translateY), y .hero-photo-frame lleva el rotate/sombra
+          estaticos para que ambos transforms no compitan en el mismo
+          elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?auto=format&fit=crop&w=1200&q=80"
+              alt="Luna Vidal en vivo"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section class="portfolio" id="portafolio">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Portafolio</p>
+          <h2>Musica y contenido en accion</h2>
+          <p class="lede">
+            Desde una sesion acustica en un cuarto chico hasta las luces de
+            un festival: asi se ve la musica cuando tambien se cuenta como
+            contenido, sin perder lo que la hace real.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de contenido">
+          <li class="filter-chip">Conciertos</li>
+          <li class="filter-chip">Estudio</li>
+          <li class="filter-chip">Backstage</li>
+          <li class="filter-chip">Videoclips</li>
+          <li class="filter-chip">Sesiones</li>
+          <li class="filter-chip">Colaboraciones</li>
+        </ul>
+
+        <!--
+          Tarjetas con foto estatica + boton de "play" con estilo de
+          miniatura de video (sin video real detras): ningun
+          data-video-src/data-video-id, asi que video-embed.js no carga
+          nada al hacer clic -- ver comentario en ese archivo.
+
+          Las dos ultimas tarjetas (data-category="conciertos") son fotos
+          simples: mismo contenedor .video-embed (para heredar tamano,
+          borde y radio), pero sin .video-embed-placeholder ni scrim --
+          video-embed.js hace guard-clause en wrappers sin boton (ver
+          `if (!trigger) return;`), asi que no agrega ningun comportamiento
+          de click a estas dos.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="sesiones">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1608319917470-9d9179430f8d?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Sesion acustica">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1565145368739-29e5a81be478?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Backstage antes del show">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="videoclips">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1510731491328-7363eecd7b2d?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Making of videoclip">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboraciones">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1579539760267-b2e78d9d735e?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Ensayo con la banda">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="estudio">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1521198022873-af0f772bf653?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Detras de camaras: nuevo sencillo">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="conciertos">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1522863602463-afebb8886ab2?auto=format&fit=crop&w=700&q=80" alt="Luna Vidal cantando en el estreno de su ultimo sencillo" />
+            </div>
+          </div>
+          <div class="review-item" data-category="conciertos">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1600119692885-8b04faa7f329?auto=format&fit=crop&w=700&q=80" alt="Luna Vidal en el escenario de un festival de verano" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1612976023590-be5b6a14051d?auto=format&fit=crop&w=1200&q=80" alt="Foto de perfil de Luna Vidal" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>Compongo, canto y comparto: asi soy yo</h2>
+            <p>
+              Soy Luna Vidal, cantautora y creadora de contenido detras de
+              Diario de Luna. Me mueven las canciones que nacen de una
+              libreta a las tres de la manana, los ensayos imperfectos y las
+              conversaciones que pasan despues de un show, cuando ya no hay
+              luces encima.
+            </p>
+            <p>
+              A traves de Diario de Luna comparto el proceso de escribir,
+              grabar y salir de gira: contenido que invita a la audiencia a
+              entrar al cuarto de ensayo y quedarse para el show.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marcas">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">AUREO AUDIO</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">ONDA PLAY</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">CALLE NOVA</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">CHISPA ENERGY</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">RITMO STUDIO</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">NOCTURNA WEAR</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la sesion con Aureo Audio</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=500&q=80" alt="Prueba de sonido durante la colaboracion con Aureo Audio" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=500&q=80" alt="Detras de camaras durante la sesion con Aureo Audio" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=500&q=80" alt="Ultima toma de la sesion con Aureo Audio" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWS (bonus feature de este tier; vive en .coaching/.coaching-* -
+         ver nota de clases en src/css/main.css junto a este bloque) -->
+    <section class="coaching" id="shows">
+      <div class="container coaching-grid">
+        <div class="coaching-copy" data-reveal-group>
+          <p class="eyebrow">Shows</p>
+          <h2 class="sr-only">Luna Vidal &mdash; Shows en vivo</h2>
+          <p class="coaching-lockup">
+            <span>Luna Vidal</span>
+            En vivo esta temporada
+          </p>
+          <p class="lede">
+            Del escenario intimo a los festivales grandes: estas son las
+            proximas fechas de gira. Boletos, acreditacion de prensa e
+            invitaciones especiales, por mensaje directo.
+          </p>
+          <div class="coaching-actions">
+            <a class="btn btn-primary" href="#contacto">Reservar boletos</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Instagram @lunavidalmusic
+            </a>
+          </div>
+        </div>
+        <div class="coaching-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1531651008558-ed1740375b39?auto=format&fit=crop&w=900&q=80" alt="Luna Vidal en el escenario" loading="lazy" />
+        </div>
+      </div>
+
+      <p class="coaching-videos-label">Proximas fechas</p>
+      <div class="coaching-videos" data-reveal-group>
+        <div class="review-item" data-category="show">
+          <p class="show-date">14 nov 2026</p>
+          <p class="show-city">Ciudad de Mexico</p>
+          <p class="show-venue">Foro Indie Rocks!</p>
+          <a class="btn btn-ghost show-cta" href="#contacto">Reservar</a>
+        </div>
+        <div class="review-item" data-category="show">
+          <p class="show-date">21 nov 2026</p>
+          <p class="show-city">Guadalajara</p>
+          <p class="show-venue">Teatro Diana</p>
+          <a class="btn btn-ghost show-cta" href="#contacto">Reservar</a>
+        </div>
+        <div class="review-item" data-category="show">
+          <p class="show-date">5 dic 2026</p>
+          <p class="show-city">Monterrey</p>
+          <p class="show-venue">Auditorio Banamex &middot; Sala menor</p>
+          <a class="btn btn-ghost show-cta" href="#contacto">Reservar</a>
+        </div>
+        <div class="review-item" data-category="show">
+          <p class="show-date">17 ene 2027</p>
+          <p class="show-city">Bogota</p>
+          <p class="show-venue">Festival Estereo Vivo</p>
+          <a class="btn btn-ghost show-cta" href="#contacto">Reservar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Formas de colaborar</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Mencion en redes</p>
+            <ul class="pricing-list">
+              <li>1 historia en Instagram</li>
+              <li>1 clip corto del backstage o ensayo</li>
+              <li>Mencion de la marca en descripcion</li>
+              <li>Etiqueta de colaboracion en redes sociales</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$1,800 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Contenido dedicado</p>
+            <ul class="pricing-list">
+              <li>1 reel dedicado grabado en estudio o backstage</li>
+              <li>3 historias en Instagram</li>
+              <li>1 publicacion tipo carrusel con etiqueta de colaboracion</li>
+              <li>Codigo de descuento autorizado en la publicacion</li>
+              <li>Mencion de la marca en descripcion</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$3,200 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Colaboracion completa</p>
+            <ul class="pricing-list">
+              <li>2 reels dedicados (estudio + backstage)</li>
+              <li>6 historias en Instagram</li>
+              <li>1 publicacion tipo carrusel con etiqueta de colaboracion</li>
+              <li>Codigo de descuento autorizado en la publicacion</li>
+              <li>Mini show acustico privado para invitados de la marca</li>
+              <li>1 video de YouTube</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$6,500 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Colaboramos?</h2>
+        <p class="lede">
+          Si tu marca busca sonar autentica, <strong>no como un anuncio
+          mas</strong>, hablemos. Para shows, prensa o colaboraciones, reviso
+          Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Escuchame en Spotify
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Luna Vidal. Hecho con carino.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Spotify</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

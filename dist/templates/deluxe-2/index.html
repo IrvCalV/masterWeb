@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emiliano Cruz &middot; Fotógrafo y Mentor Creativo</title>
+  <meta name="description" content="Media kit de Emiliano Cruz: fotografía editorial y de marca, mentorías 1:1 para fotógrafos e impresiones de edición limitada." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-Dx8UUqrt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DJicZ2S4.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Emiliano Cruz</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#mentorias">Mentorias</a>
+        <a href="#impresiones">Impresiones</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">Fotografo Editorial &middot; Mentor Creativo</p>
+          <h1>Emiliano Cruz</h1>
+          <p class="hero-subtitle">
+            Hago fotografia editorial y de retrato para marcas que quieren
+            verse como se sienten, y acompano a fotografos que apenas estan
+            encontrando su propio ojo. Entre una campana y una sesion de
+            mentoria, siempre hay una camara en la mano.
+          </p>
+        </div>
+        <!--
+          Tier "Completo" simplificado: en vez del recorte sin fondo de la
+          referencia (que requiere una foto real editada), aqui una foto de
+          Unsplash normal dentro de un marco con esquinas redondeadas,
+          borde y ligera rotacion -- misma sensacion editorial, sin
+          necesitar el recorte. Vive fuera de [data-reveal-group] a
+          proposito: .hero-photo es su propio target de scroll-reveal
+          (fade + translateY), y .hero-photo-frame lleva el rotate/sombra
+          estaticos para que ambos transforms no compitan en el mismo
+          elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1603574670812-d24560880210?auto=format&fit=crop&w=1200&q=80"
+              alt="Emiliano Cruz sosteniendo su camara en un set de fotografia"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1587050265310-1a2d98ccce5f?auto=format&fit=crop&w=1200&q=80" alt="Foto de perfil de Emiliano Cruz con su camara" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>Primero aprendi a ver, despues a disparar</h2>
+            <p>
+              Soy Emiliano Cruz. Empece cargando equipo y sosteniendo
+              reflectores como asistente, anotando cada decision de luz que
+              tomaba el fotografo para el que trabajaba. De ahi vino el ojo:
+              antes de abrir mi propio estudio, pase anos observando como
+              una sombra bien puesta cambia por completo un retrato.
+            </p>
+            <p>
+              Hoy divido mi tiempo entre sesiones para marcas y editoriales,
+              y mentorias 1:1 con fotografos que estan en la etapa en la que
+              yo estuve: con equipo, con ganas, pero sin todavia saber donde
+              pararse.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section class="portfolio" id="portafolio">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Portafolio</p>
+          <h2>Retratos, campanas y lo que pasa detras de camara</h2>
+          <p class="lede">
+            Una seleccion amplia de trabajo editorial, campanas de marca y
+            algunos momentos detras de camara durante los shootings -- la
+            fotografia es el producto, asi que aqui hay mas fotos que
+            video.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de fotografia">
+          <li class="filter-chip">Retrato</li>
+          <li class="filter-chip">Editorial</li>
+          <li class="filter-chip">Moda</li>
+          <li class="filter-chip">Campana</li>
+          <li class="filter-chip">Boda</li>
+          <li class="filter-chip">Producto</li>
+          <li class="filter-chip">Detras de camara</li>
+        </ul>
+
+        <!--
+          16 piezas en total: 13 fotos estaticas (el producto real de este
+          sitio) y 3 video-embeds falsos reservados para "detras de
+          camara" (data-provider="local", sin data-video-src/data-video-id,
+          asi que video-embed.js no carga nada real al hacer clic -- ver
+          comentario en ese archivo). Las fotos reutilizan el mismo
+          contenedor .video-embed solo por su caja de aspecto 9:16 y su
+          object-fit:cover, sin el boton/scrim de reproduccion.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="retrato">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1512813498716-3e640fed3f39?auto=format&fit=crop&w=1300&q=80" alt="Retrato editorial en blanco y negro" />
+            </div>
+          </div>
+          <div class="review-item" data-category="editorial">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1621024994278-e409544f4085?auto=format&fit=crop&w=800&q=80" alt="Fotografia editorial con luz dura" />
+            </div>
+          </div>
+          <div class="review-item" data-category="bts">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1640519613548-5b7f71eff913?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Montando la luz antes del retrato">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="moda">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1542992933-ce75d0187ec1?auto=format&fit=crop&w=900&q=80" alt="Fotografia de moda para campana de marca" />
+            </div>
+          </div>
+          <div class="review-item" data-category="campana">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1611093793031-46db535bde90?auto=format&fit=crop&w=800&q=80" alt="Campana comercial fotografiada en estudio" />
+            </div>
+          </div>
+          <div class="review-item" data-category="retrato">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1516283182395-4b90237bff2e?auto=format&fit=crop&w=1400&q=80" alt="Retrato de estudio en blanco y negro" />
+            </div>
+          </div>
+          <div class="review-item" data-category="producto">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?auto=format&fit=crop&w=700&q=80" alt="Camara y equipo fotografico sobre una mesa" />
+            </div>
+          </div>
+          <div class="review-item" data-category="bts">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1508186225823-0963cf9ab0de?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Revisando tomas en el set">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="boda">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1638638977172-9f7169a77930?auto=format&fit=crop&w=800&q=80" alt="Retrato de boda en luz natural" />
+            </div>
+          </div>
+          <div class="review-item" data-category="editorial">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1541519481457-763224276691?auto=format&fit=crop&w=900&q=80" alt="Editorial de moda en exteriores" />
+            </div>
+          </div>
+          <div class="review-item" data-category="retrato">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1518611540400-6b85a0704342?auto=format&fit=crop&w=1200&q=80" alt="Retrato cercano en blanco y negro" />
+            </div>
+          </div>
+          <div class="review-item" data-category="moda">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1578741837908-b9cfb8a0c60c?auto=format&fit=crop&w=800&q=80" alt="Sesion de moda con iluminacion de estudio" />
+            </div>
+          </div>
+          <div class="review-item" data-category="producto">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1504275490777-45f30792f13f?auto=format&fit=crop&w=700&q=80" alt="Lentes y accesorios de camara" />
+            </div>
+          </div>
+          <div class="review-item" data-category="campana">
+            <div class="video-embed">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1558730234-d8b2281b0d00?auto=format&fit=crop&w=900&q=80" alt="Fotografia de campana para marca de hospitalidad" />
+            </div>
+          </div>
+          <div class="review-item" data-category="bts">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Preparando el fondo de estudio">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORIAS 1:1 -->
+    <section class="coaching" id="mentorias">
+      <div class="container coaching-grid">
+        <div class="coaching-copy" data-reveal-group>
+          <p class="eyebrow">Mentorias 1:1</p>
+          <h2 class="sr-only">Estudio Cruz &mdash; Mentoria fotografica</h2>
+          <p class="coaching-lockup">
+            <span>Estudio Cruz</span>
+            Mentoria fotografica
+          </p>
+          <p class="lede">
+            Ademas de fotografiar marcas, acompano a fotografos que quieren
+            mejorar su ojo y mostrar su trabajo con mas confianza: sesiones
+            1:1 enfocadas en composicion, luz y direccion de portafolio.
+          </p>
+          <div class="coaching-actions">
+            <a class="btn btn-primary" href="#contacto">Agenda tu mentoria</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Instagram @emilianocruz.foto
+            </a>
+          </div>
+        </div>
+        <div class="coaching-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?auto=format&fit=crop&w=900&q=80" alt="Emiliano Cruz revisando fotografias con un estudiante" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Programas</p>
+          <h2>Formas de trabajar conmigo</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Sesion de revision de portafolio</p>
+            <ul class="pricing-list">
+              <li>Revisamos tu portafolio actual, serie por serie, con retroalimentacion honesta y accionable.</li>
+              <li>Duracion: 75 minutos</li>
+            </ul>
+            <p class="pricing-price">$900 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Mentoria mensual</p>
+            <ul class="pricing-list">
+              <li>Acompanamiento continuo: cuatro sesiones al mes para trabajar tecnica, estilo y direccion de carrera.</li>
+              <li>Duracion: 4 sesiones &middot; 1 mes</li>
+            </ul>
+            <p class="pricing-price">$3,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Workshop grupal de iluminacion</p>
+            <ul class="pricing-list">
+              <li>Taller practico en estudio: esquemas de luz, modificadores y ejercicios en vivo con modelo.</li>
+              <li>Duracion: sesion de 3 horas</li>
+            </ul>
+            <p class="pricing-price">$1,500 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPRESIONES -->
+    <section id="impresiones">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Impresiones</p>
+          <h2>Piezas de edicion limitada</h2>
+          <p class="lede">
+            Algunas de mis fotografias favoritas estan disponibles como
+            impresion fine-art, en tiraje limitado. Catalogo simple: eliges
+            la pieza y el tamano, yo me encargo del resto.
+          </p>
+        </div>
+
+        <div class="brand-bts" data-reveal-group>
+          <p class="brand-bts-label">Disponibles para impresion este mes</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Retrato en blanco y negro disponible como impresion fine-art" loading="lazy" />
+              <figcaption class="brand-bts-label">Impresion 30x40cm &mdash; $800 MXN</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1580707221190-bd94d9087b7f?auto=format&fit=crop&w=900&q=80" alt="Retrato editorial disponible como impresion fine-art" loading="lazy" />
+              <figcaption class="brand-bts-label">Impresion 40x50cm &mdash; $1,200 MXN</figcaption>
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=900&q=80" alt="Retrato de estudio disponible como impresion fine-art" loading="lazy" />
+              <figcaption class="brand-bts-label">Impresion 50x70cm &mdash; $1,800 MXN</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marcas">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">NIKARA OPTICS</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">MAISON VELARDE</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">FARALLON HOTELES</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">ICONO REVISTA</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la campana con Farallon Hoteles</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=500&q=80" alt="Set de fotografia para la campana con Farallon Hoteles" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1513031300226-c8fb12de9ade?auto=format&fit=crop&w=500&q=80" alt="Retrato de campana para Farallon Hoteles" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=500&q=80" alt="Detalle de la sesion de la campana con Farallon Hoteles" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Sesiones y campanas comerciales</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Esencial</p>
+            <ul class="pricing-list">
+              <li>2 horas de sesion en estudio o locacion</li>
+              <li>15 fotografias editadas en alta resolucion</li>
+              <li>Licencia de uso para redes sociales</li>
+              <li>1 ronda de ajustes</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$4,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Editorial</p>
+            <ul class="pricing-list">
+              <li>4 horas de sesion en estudio o locacion</li>
+              <li>30 fotografias editadas en alta resolucion</li>
+              <li>Licencia de uso para redes y pauta digital</li>
+              <li>Direccion de arte basica</li>
+              <li>2 rondas de ajustes</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$8,000 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Campana Premium</p>
+            <ul class="pricing-list">
+              <li>Jornada completa de 8 horas</li>
+              <li>60 fotografias editadas en alta resolucion</li>
+              <li>Licencia de uso ampliada (digital e impresa)</li>
+              <li>Direccion de arte y moodboard previo</li>
+              <li>1 video corto detras de camara</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$14,000 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Trabajamos juntos?</h2>
+        <p class="lede">
+          Si tu marca necesita fotografia que se sienta hecha a medida, o si
+          quieres una mentoria para encontrar tu propio ojo,
+          <strong>escribeme</strong>. Reviso Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Ve mi trabajo en Behance
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Emiliano Cruz. Hecho con cuidado.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Behance</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">500px</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

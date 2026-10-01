@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renata Solís &middot; Chef y Creadora de Contenido</title>
+  <meta name="description" content="Media kit de Renata Solís: recetas en video, clases de cocina, cenas privadas y colaboraciones de marca." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-UxoTQeWx.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DEX7ZwT8.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Renata Solís</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#recetas">Recetas</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#colaboraciones">Colaboraciones</a>
+        <a href="#clases">Clases</a>
+        <a href="#cenas">Cenas privadas</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">Chef &middot; Creadora de Contenido Gastronomico</p>
+          <h1>Renata Solís</h1>
+          <p class="hero-subtitle">
+            Cocino con la tecnica de un restaurante y la explico como se la
+            explicaria a una amiga en su cocina. Para las marcas, eso
+            significa contenido que sabe a receta real, no a comercial; y
+            si prefieres vivirlo en persona, tambien tomo clases de cocina
+            y cenas privadas a domicilio.
+          </p>
+        </div>
+        <!--
+          Tier "Completo" simplificado: en vez del recorte sin fondo de la
+          referencia (que requiere una foto real editada), aqui una foto de
+          Unsplash normal dentro de un marco con esquinas redondeadas,
+          borde y ligera rotacion -- misma sensacion editorial, sin
+          necesitar el recorte. Vive fuera de [data-reveal-group] a
+          proposito: .hero-photo es su propio target de scroll-reveal
+          (fade + translateY), y .hero-photo-frame lleva el rotate/sombra
+          estaticos para que ambos transforms no compitan en el mismo
+          elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=1200&q=80"
+              alt="Renata Solís"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECETAS EN VIDEO -->
+    <section class="portfolio" id="recetas">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Recetas en Video</p>
+          <h2>Cada receta, explicada paso a paso</h2>
+          <p class="lede">
+            Desde una receta completa hasta un tip de 60 segundos: aqui
+            vive el contenido que hago cada semana, incluidas las
+            colaboraciones de marca que saben a recomendacion real, no a
+            comercial.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de contenido">
+          <li class="filter-chip">Recetas</li>
+          <li class="filter-chip">60 Segundos</li>
+          <li class="filter-chip">Tecnica</li>
+          <li class="filter-chip">Detras de Camaras</li>
+          <li class="filter-chip">Colaboracion</li>
+        </ul>
+
+        <!--
+          Tarjetas con foto estatica + boton de "play" con estilo de
+          miniatura de video (sin video real detras): ningun
+          data-video-src/data-video-id, asi que video-embed.js no carga
+          nada al hacer clic -- ver comentario en ese archivo.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="60-segundos">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1577219492769-b63a779fac28?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Receta en 60 segundos: pasta cacio e pepe">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="tecnica">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Como emplatar como en el restaurante">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="bts">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Detras de camaras: el rodaje de la receta de temporada">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="60-segundos">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1595257841889-eca2678454e2?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Receta en 60 segundos: tacos de pesca del dia">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="recetas">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Receta completa: risotto de hongos silvestres">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboracion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Postre en colaboracion con Molino Raiz">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboracion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1663530761401-15eefb544889?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Receta patrocinada: pan de masa madre">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="recetas">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1488992783499-418eb1f62d08?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Receta completa: ceviche de temporada">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80" alt="Foto de perfil de Renata Solís" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>De cocina de restaurante a cocina de casa: asi soy yo</h2>
+            <p>
+              Soy Renata Solís, chef de formacion profesional. Pase años de
+              lineas de cocina, mise en place cronometrado y presion de
+              servicio antes de descubrir que lo que mas disfrutaba era
+              explicar el porque detras de cada tecnica.
+            </p>
+            <p>
+              Hoy uso ese oficio para crear contenido que acerca la cocina
+              de restaurante a la cocina de casa: recetas con fundamento
+              tecnico, explicadas sin tecnicismos, para quien quiere
+              cocinar mejor sin dejar de disfrutar el proceso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLABORACIONES -->
+    <section class="brands" id="colaboraciones">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">COBRE Y FUEGO</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">MOLINO RAIZ</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">LA DESPENSA CLUB</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">FOGON STUDIO</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la colaboracion con Fogon Studio</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1758705477547-1070b9fac15d?auto=format&fit=crop&w=500&q=80" alt="Preparacion en cocina durante la colaboracion con Fogon Studio" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1770140304098-46700a5c45c8?auto=format&fit=crop&w=500&q=80" alt="Detalle de plato durante el rodaje con Fogon Studio" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1767050179711-a8401bd02be9?auto=format&fit=crop&w=500&q=80" alt="Montaje final del dia de rodaje con Fogon Studio" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASES DE COCINA -->
+    <section class="classes" id="clases">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Clases de Cocina</p>
+          <h2>Aprende a cocinar conmigo, en vivo</h2>
+          <p class="lede">
+            Clases presenciales en mi cocina, pensadas para todos los
+            niveles: desde tu primera vez usando bien un cuchillo, hasta
+            una tarde en pareja o un taller completo para tu proximo
+            evento.
+          </p>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Clase individual</p>
+            <ul class="pricing-list">
+              <li>Sesion personalizada de 2 horas en mi cocina</li>
+              <li>Menu de temporada a tu eleccion</li>
+              <li>Para 1 persona</li>
+            </ul>
+            <p class="pricing-price">$950 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Clase en pareja</p>
+            <ul class="pricing-list">
+              <li>Experiencia de 2.5 horas para dos</li>
+              <li>Incluye maridaje de vinos</li>
+              <li>Ideal para una cita distinta</li>
+            </ul>
+            <p class="pricing-price">$1,700 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Taller grupal para eventos</p>
+            <ul class="pricing-list">
+              <li>Taller de 3 horas para grupos de 6 a 12 personas</li>
+              <li>Perfecto para despedidas, cumpleanos o team building</li>
+              <li>Incluye delantal y recetario impreso</li>
+            </ul>
+            <p class="pricing-price">Desde $6,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Clase infantil</p>
+            <ul class="pricing-list">
+              <li>Clase de 1.5 horas para ninas y ninos de 6 a 12 anos</li>
+              <li>Recetas simples, dulces y sin filo</li>
+              <li>Cada chef en entrenamiento se lleva su creacion</li>
+            </ul>
+            <p class="pricing-price">$650 <span>MXN</span></p>
+          </article>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi se ven mis talleres</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1782821961510-aa2b6baed210?auto=format&fit=crop&w=500&q=80" alt="Grupo cocinando durante un taller con Renata Solís" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1783887141643-1658731fe9ac?auto=format&fit=crop&w=500&q=80" alt="Estaciones de trabajo preparadas para una clase de cocina" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1774921677530-9031f1ea00ec?auto=format&fit=crop&w=500&q=80" alt="Momento de ensenanza durante una clase de cocina" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENAS PRIVADAS -->
+    <section class="coaching" id="cenas">
+      <div class="container coaching-grid">
+        <div class="coaching-copy" data-reveal-group>
+          <p class="eyebrow">Cenas Privadas</p>
+          <h2 class="sr-only">Renata Solís &mdash; Chef en tu mesa</h2>
+          <p class="coaching-lockup">
+            <span>Renata Solís</span>
+            Chef en tu mesa
+          </p>
+          <p class="lede">
+            Llevo mi cocina a la tuya: una cena de varios tiempos,
+            disenada para tu mesa, tu ocasion y tus invitados. Sin salir
+            de casa, con el nivel de un restaurante.
+          </p>
+          <div class="coaching-actions">
+            <a class="btn btn-primary" href="#contacto">Consulta disponibilidad</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Ve el menu en Instagram
+            </a>
+          </div>
+        </div>
+        <div class="coaching-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1683624328172-88fb24625ec1?auto=format&fit=crop&w=900&q=80" alt="Mesa puesta para una cena privada" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="dinner-steps" data-reveal-group>
+          <div class="dinner-step">
+            <span class="dinner-step-number">01</span>
+            <h3>Consulta de menu</h3>
+            <p>
+              Platicamos tus gustos, restricciones y la ocasion para
+              disenar un menu de varios tiempos a tu medida.
+            </p>
+          </div>
+          <div class="dinner-step">
+            <span class="dinner-step-number">02</span>
+            <h3>Dia del evento</h3>
+            <p>
+              Llego con todo lo necesario, cocino en tu cocina y sirvo
+              cada tiempo mientras disfrutas la noche con tus invitados.
+            </p>
+          </div>
+          <div class="dinner-step">
+            <span class="dinner-step-number">03</span>
+            <h3>Maridaje opcional</h3>
+            <p>
+              Suma una seleccion de vinos o cocteles por tiempo, pensada
+              para acompanar cada platillo del menu.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="coaching-videos-label">Asi se ve una cena privada</p>
+      <div class="brand-bts">
+        <div class="brand-bts-photos">
+          <figure class="brand-bts-photo brand-bts-photo--a">
+            <img src="https://images.unsplash.com/photo-1636647511729-6703539ba71f?auto=format&fit=crop&w=500&q=80" alt="Mesa con velas lista para una cena privada" loading="lazy" />
+          </figure>
+          <figure class="brand-bts-photo brand-bts-photo--b">
+            <img src="https://images.unsplash.com/photo-1683105693841-8c81235be472?auto=format&fit=crop&w=500&q=80" alt="Detalle de vajilla y copas en una cena privada" loading="lazy" />
+          </figure>
+          <figure class="brand-bts-photo brand-bts-photo--c">
+            <img src="https://images.unsplash.com/photo-1625631980683-825234bfb7d5?auto=format&fit=crop&w=500&q=80" alt="Ambiente de la mesa durante una cena privada" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Formas de colaborar con tu marca</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Receta Patrocinada</p>
+            <ul class="pricing-list">
+              <li>1 receta en video patrocinada</li>
+              <li>2 historias en Instagram</li>
+              <li>Mencion de marca en el pie de foto</li>
+              <li>Entrega de material en alta resolucion</li>
+            </ul>
+            <p class="pricing-price">$1,400 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Paquete de Temporada</p>
+            <ul class="pricing-list">
+              <li>3 recetas en video a lo largo del mes</li>
+              <li>6 historias en Instagram</li>
+              <li>1 publicacion tipo carrusel con receta descargable</li>
+              <li>Codigo de descuento autorizado en la publicacion</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$3,200 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Embajadora de Marca</p>
+            <ul class="pricing-list">
+              <li>3 recetas en video</li>
+              <li>8 historias en Instagram</li>
+              <li>1 publicacion tipo carrusel</li>
+              <li>Aparicion de producto en una cena privada</li>
+              <li>1 video de YouTube de formato largo</li>
+              <li>Entrega de material</li>
+            </ul>
+            <p class="pricing-price">$5,800 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Cocinamos juntos?</h2>
+        <p class="lede">
+          Si buscas una receta patrocinada que sepa genuina, o quieres
+          reservar una cena privada para una ocasion especial,
+          <strong>hablemos</strong>. Reviso Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Escribeme por correo
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Renata Solís. Hecho con carino.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Pinterest</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

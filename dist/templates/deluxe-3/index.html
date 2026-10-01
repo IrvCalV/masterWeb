@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniela Rossi &middot; Entrenadora y Creadora de Contenido</title>
+  <meta name="description" content="Media kit de Daniela Rossi: entrenamiento personalizado, planes de nutricion y colaboraciones de marca para una creadora de contenido fitness." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-C-GspKFd.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bb6ABMn3.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Daniela Rossi</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#contenido">Contenido</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#programas">Programas</a>
+        <a href="#coaching">Coaching</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">Entrenadora Personal &middot; Nutricionista &middot; Creadora de Contenido Fitness</p>
+          <h1>Daniela Rossi</h1>
+          <p class="hero-subtitle">
+            Entreno cuerpos, armo planes de alimentacion sin dietas de moda y
+            cuento todo el proceso en video: rutinas reales, errores comunes
+            y lo que de verdad funciona. Para las marcas, eso significa
+            contenido que entrena tanto como vende, no un anuncio mas en
+            el feed.
+          </p>
+        </div>
+        <!--
+          Tier "Deluxe": foto de Unsplash dentro de un marco con esquinas
+          anguladas y gradiente en los acentos teal/coral -- mismo patron
+          del resto del catalogo (marco + ligera rotacion), llevado a la
+          paleta energetica de este demo. Vive fuera de [data-reveal-group]
+          a proposito: .hero-photo es su propio target de scroll-reveal
+          (fade + translateY), y .hero-photo-frame lleva el rotate/sombra
+          estaticos para que ambos transforms no compitan en el mismo
+          elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1609899517237-77d357b047cf?auto=format&fit=crop&w=1200&q=80"
+              alt="Daniela Rossi"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO DE ENTRENAMIENTO -->
+    <section class="portfolio" id="contenido">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Contenido</p>
+          <h2>Entrenamiento, nutricion y vida real</h2>
+          <p class="lede">
+            Desde una rutina de piernas hasta lo que como despues de
+            entrenar: se encontrar el momento que hace que una marca se
+            sienta parte de mi rutina, no una pausa comercial.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de contenido">
+          <li class="filter-chip">Rutinas</li>
+          <li class="filter-chip">Tecnica</li>
+          <li class="filter-chip">Nutricion</li>
+          <li class="filter-chip">Colaboracion</li>
+          <li class="filter-chip">Backstage</li>
+          <li class="filter-chip">Detras de camaras</li>
+        </ul>
+
+        <!--
+          Tarjetas con foto estatica + boton de "play" con estilo de
+          miniatura de video (sin video real detras): ningun
+          data-video-src/data-video-id, asi que video-embed.js no carga
+          nada al hacer clic -- ver comentario en ese archivo.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="rutinas">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1772450014685-369473acebc2?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Rutina de piernas en 20 minutos">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="tecnica">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1776710669819-8ce325bce775?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Chequeo de tecnica: sentadilla">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="nutricion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Que como en un dia de entrenamiento">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboracion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Probando los suplementos de NutriForm">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1758875569220-6934933d443c?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Antes de grabar: asi armo mis rutinas">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="detras">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1543352632-5a4b24e4d2a6?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Mis snacks favoritos post-entreno">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="tecnica">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Errores comunes al hacer peso muerto">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=1200&q=80" alt="Daniela Rossi entrenando en el gym" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>Entreno, como bien y lo comparto: asi soy yo</h2>
+            <p>
+              Soy Daniela Rossi, entrenadora personal certificada y
+              nutricionista. Me mueve ver a alguien pasar de sentirse
+              perdido en el gym a entender su propio cuerpo: como se
+              mueve, que necesita comer y por que la constancia le gana a
+              cualquier dieta de moda.
+            </p>
+            <p>
+              A traves de mi contenido comparto rutinas, chequeos de
+              tecnica y lo que de verdad como en un dia normal, sin
+              extremos ni promesas vacias. Ayudo sobre todo a quien ya
+              probo mil dietas y quiere, por fin, informacion real que si
+              pueda sostener.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAS Y PLANES -->
+    <section class="pricing" id="programas">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Programas</p>
+          <h2>Planes para entrenar y comer mejor</h2>
+          <p class="lede">
+            Estructura clara y objetivos concretos: elige el programa que
+            mejor se ajuste a donde estas hoy.
+          </p>
+        </div>
+        <!--
+          Reutiliza las clases .pricing-grid / .pricing-card tal cual
+          (misma barra-gradiente, misma tipografia) para esta lista de
+          programas pagados -- son precios distintos a los paquetes de
+          colaboracion de marca de la seccion #paquetes, pero visualmente
+          conviene que ambos se lean como "listas de precios" de la misma
+          familia.
+        -->
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Plan de nutricion personalizado</p>
+            <ul class="pricing-list">
+              <li>Menu semanal ajustado a tus macros, gustos y rutina</li>
+              <li>Sin dietas de moda ni restricciones extremas</li>
+              <li>Duracion: 4 semanas</li>
+            </ul>
+            <p class="pricing-price">$1,800 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Programa de entrenamiento en linea</p>
+            <ul class="pricing-list">
+              <li>Rutinas progresivas grabadas, para entrenar donde estes</li>
+              <li>Ajustes quincenales segun tu avance</li>
+              <li>Duracion: 8 semanas</li>
+            </ul>
+            <p class="pricing-price">$3,200 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Plan todo incluido</p>
+            <ul class="pricing-list">
+              <li>Entrenamiento + nutricion en un solo plan</li>
+              <li>Revision quincenal de ambos</li>
+              <li>Duracion: 8 semanas</li>
+            </ul>
+            <p class="pricing-price">$4,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Asesoria unica de arranque</p>
+            <ul class="pricing-list">
+              <li>Evaluacion completa de habitos y rutina actual</li>
+              <li>Plan de accion para empezar con el pie derecho</li>
+              <li>Sesion unica, 90 minutos</li>
+            </ul>
+            <p class="pricing-price">$950 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COACHING 1:1 -->
+    <section class="events" id="coaching">
+      <div class="container events-grid">
+        <div class="events-copy" data-reveal-group>
+          <p class="eyebrow">Coaching 1:1</p>
+          <h2 class="sr-only">Daniela Rossi &mdash; Coaching 1:1</h2>
+          <p class="events-lockup">
+            <span>Alto contacto, resultados reales</span>
+            Coaching 1:1
+          </p>
+          <p class="lede">
+            Evaluacion inicial, plan a la medida y seguimiento semanal: la
+            version mas personalizada de mi acompanamiento, pensada para
+            quien quiere resultados sin adivinar.
+          </p>
+          <!--
+            Reutiliza .pricing-list (mismo token tipografico/espaciado que
+            el resto del sitio) para los 3 pasos del proceso, sin agregar
+            una hoja de estilos nueva.
+          -->
+          <ul class="pricing-list">
+            <li><strong>Evaluacion inicial</strong> &mdash; hablamos de tu historial, tus metas y tu rutina actual</li>
+            <li><strong>Plan a la medida</strong> &mdash; entrenamiento y alimentacion disenados para tu vida real</li>
+            <li><strong>Seguimiento semanal</strong> &mdash; ajustes constantes segun tu progreso real</li>
+          </ul>
+          <div class="events-actions">
+            <a class="btn btn-primary" href="#contacto">Quiero mi coaching 1:1</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Instagram @daniela.rossi.fit
+            </a>
+          </div>
+        </div>
+        <div class="events-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1775654792298-797c44f5d439?auto=format&fit=crop&w=900&q=80" alt="Sesion de entrenamiento personalizado" loading="lazy" />
+        </div>
+      </div>
+
+      <p class="events-videos-label">Asi es un seguimiento semanal</p>
+      <div class="events-videos" data-reveal-group>
+        <div class="review-item" data-category="coaching">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1606858374191-c18040e98ad7?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Como reviso tu progreso cada semana">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="coaching">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1569420077790-afb136b3bb8c?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Ajustes a tu plan de nutricion">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="coaching">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1543352632-fea6d4f83e78?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Preguntas frecuentes sobre el coaching 1:1">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marcas">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">VERDEFIT</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">NUTRIFORM</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">FRESCOBOX</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">PULSOACTIVE</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la colaboracion con NutriForm</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1608405059861-b21a68ae76a2?auto=format&fit=crop&w=500&q=80" alt="Preparacion de comidas saludables para la colaboracion con NutriForm" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1562088287-bde35a1ea917?auto=format&fit=crop&w=500&q=80" alt="Grabacion de contenido de nutricion con productos NutriForm" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1593431763017-c689a61b729a?auto=format&fit=crop&w=500&q=80" alt="Mesa con alimentos saludables durante la colaboracion con NutriForm" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Formas de colaborar</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Reel patrocinado</p>
+            <ul class="pricing-list">
+              <li>1 reel con tu producto integrado en una rutina o receta</li>
+            </ul>
+            <p class="pricing-price">$3,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Serie de 3 publicaciones</p>
+            <ul class="pricing-list">
+              <li>Reel + 2 historias destacadas</li>
+              <li>Mensaje coordinado contigo</li>
+            </ul>
+            <p class="pricing-price">$7,800 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Colaboracion mensual</p>
+            <ul class="pricing-list">
+              <li>4 piezas de contenido al mes</li>
+              <li>Mencion en mis programas de coaching</li>
+            </ul>
+            <p class="pricing-price">$14,000 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Evento o lanzamiento de producto</p>
+            <ul class="pricing-list">
+              <li>Cobertura en vivo del evento</li>
+              <li>Contenido editado para tus redes</li>
+            </ul>
+            <p class="pricing-price">$9,500 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Entrenamos?</h2>
+        <p class="lede">
+          Si tu marca o tu proyecto buscan resultados reales,
+          <strong>no un anuncio mas en el feed</strong>, hablemos.
+          Reviso Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Sigueme en Strava
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Daniela Rossi. Hecho con carino.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Strava</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

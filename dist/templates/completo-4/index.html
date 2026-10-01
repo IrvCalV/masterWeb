@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila Ponce &middot; Maquillista &amp; Creadora de Contenido</title>
+  <meta name="description" content="Media kit de Camila Ponce: maquillaje editorial, tutoriales de transformacion y colaboraciones con marcas de belleza." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@400;500;600;700&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/index-DEqkflaY.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DCl15cj5.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Camila Ponce</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="#portafolio">Portafolio</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal-group>
+          <p class="eyebrow">Maquillista Profesional &middot; Creadora de Contenido &middot; Tutoriales de Belleza &middot; Transformaciones</p>
+          <h1>Camila Ponce</h1>
+          <p class="hero-subtitle">
+            Transformo rostros y cuento esa transformacion en video: tutoriales
+            paso a paso, antes y despues, y los productos que de verdad uso.
+            Para las marcas, eso significa contenido que se ve profesional y
+            se siente honesto, no un anuncio mas en el feed.
+          </p>
+        </div>
+        <!--
+          Tier "Completo": foto de Unsplash dentro de un marco con esquinas
+          redondeadas y un borde/sombra en los acentos rosa/dorado en vez de
+          un borde blanco liso -- mismo patron del resto del catalogo (marco
+          + ligera rotacion), llevado a la paleta suave editorial de este
+          demo. Vive fuera de [data-reveal-group] a proposito: .hero-photo
+          es su propio target de scroll-reveal (fade + translateY), y
+          .hero-photo-frame lleva el rotate/sombra estaticos para que ambos
+          transforms no compitan en el mismo elemento.
+        -->
+        <div class="hero-photo" data-reveal>
+          <div class="hero-photo-frame">
+            <img
+              src="https://images.unsplash.com/photo-1627037118727-cd7095b7ef02?auto=format&fit=crop&w=1200&q=80"
+              alt="Camila Ponce"
+              width="380"
+              height="475"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section class="portfolio" id="portafolio">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Portafolio</p>
+          <h2>Transformaciones y tutoriales en accion</h2>
+          <p class="lede">
+            Desde una rutina de piel hasta un look completo de editorial: se
+            encontrar el momento que hace que una marca se sienta parte de la
+            transformacion, no un comercial pegado al final.
+          </p>
+        </div>
+
+        <ul class="filter-bar" aria-label="Categorias de contenido">
+          <li class="filter-chip">Transformacion</li>
+          <li class="filter-chip">Editorial</li>
+          <li class="filter-chip">Backstage</li>
+          <li class="filter-chip">Tutorial</li>
+          <li class="filter-chip">Colaboracion</li>
+          <li class="filter-chip">Detras de camaras</li>
+        </ul>
+
+        <!--
+          Tarjetas con foto estatica + boton de "play" con estilo de
+          miniatura de video (sin video real detras): ningun
+          data-video-src/data-video-id, asi que video-embed.js no carga
+          nada al hacer clic -- ver comentario en ese archivo.
+        -->
+        <div class="reviews-grid" data-reveal-group>
+          <div class="review-item" data-category="transformacion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1622336889416-8d790ad807d7?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Antes y despues: piel luminosa">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="tutorial">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1636023730877-233b9237d4ec?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Tutorial: glam de noche">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="editorial">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Editorial de belleza: campana primavera">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="colaboracion">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1571332283201-99c82a8b3046?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Resena: nueva paleta de sombras">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1613966802194-d46a163af70d?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="GRWM para evento">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="detras">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Mis productos favoritos del mes">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+          <div class="review-item" data-category="backstage">
+            <div class="video-embed" data-provider="local">
+              <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1621691553102-66d4ecdb1be2?auto=format&fit=crop&w=700&q=80" alt="" />
+              <div class="video-embed-scrim" aria-hidden="true"></div>
+              <button class="video-embed-placeholder" type="button" data-title="Backstage en sesion de fotos">
+                <span class="video-embed-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span class="video-embed-label">Ver video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1614006659838-d4ca51cbd117?auto=format&fit=crop&w=1200&q=80" alt="Camila Ponce maquillando en sesion" />
+        </div>
+        <div class="about-copy-wrap">
+          <div class="about-copy" data-reveal-group>
+            <p class="eyebrow">Sobre mi</p>
+            <h2>Resalto, no enmascaro: asi maquillo yo</h2>
+            <p>
+              Soy Camila Ponce, maquillista profesional y creadora de
+              contenido de belleza. Todo empezo maquillando a mis amigas
+              antes de fiestas en la prepa; hoy combino sesiones de
+              maquillaje con una comunidad que aprende conmigo frente a la
+              camara.
+            </p>
+            <p>
+              Mi filosofia es simple: resaltar lo que ya esta ahi, no
+              esconderlo detras de una mascara de producto. A traves de mis
+              redes comparto tutoriales, resenas honestas y el proceso
+              completo detras de cada transformacion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" id="marcas">
+      <div class="container">
+        <p class="eyebrow">Colaboraciones</p>
+        <!--
+          Formato fijo de cada colaboracion -- reutiliza este bloque tal
+          cual para agregar marcas nuevas en este o en futuros proyectos.
+
+          Con logo real: recorta/extrae solo el wordmark en negro solido
+          sobre fondo transparente -- nada de fondo, nube, tagline ni
+          decoracion suelta -- y usalo como .brand-mark:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <img class="brand-mark" src="LOGO_EXTRAIDO.png" alt="Nombre de la marca" />
+          </a>
+
+          Sin logo todavia (el caso de este demo: son marcas ficticias
+          inventadas para el catalogo), usa el nombre en texto:
+
+          <a class="brand-item" href="URL_DEL_PERFIL" target="_blank" rel="noopener">
+            <span class="brand-handle">NOMBRE DE LA MARCA</span>
+          </a>
+        -->
+        <!--
+          Fila estatica de marcas (sin auto-scroll): si agregas o quitas
+          una marca, solo hay un set que editar.
+        -->
+        <div class="brand-marquee" data-reveal>
+          <div class="brand-strip">
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">LUNA BEAUTY</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">VELVET GLOW</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">ROSEWOOD COSMETICS</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">GILD &amp; BLOOM</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">BLUSH ATELIER</span>
+            </a>
+            <a class="brand-item" href="#" target="_blank" rel="noopener">
+              <span class="brand-handle">AURELIA SKIN</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="brand-bts">
+          <p class="brand-bts-label">Asi fue la colaboracion con Rosewood Cosmetics</p>
+          <div class="brand-bts-photos">
+            <figure class="brand-bts-photo brand-bts-photo--a">
+              <img src="https://images.unsplash.com/photo-1616639943825-e0fbad20a3d3?auto=format&fit=crop&w=500&q=80" alt="Flatlay de productos de maquillaje de la campana con Rosewood Cosmetics" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--b">
+              <img src="https://images.unsplash.com/photo-1611367540736-b1b38aff784b?auto=format&fit=crop&w=500&q=80" alt="Paleta y brochas usadas en la colaboracion" loading="lazy" />
+            </figure>
+            <figure class="brand-bts-photo brand-bts-photo--c">
+              <img src="https://images.unsplash.com/photo-1598528738936-c50861cc75a9?auto=format&fit=crop&w=500&q=80" alt="Productos de la campana de Rosewood Cosmetics" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section class="events" id="reservas">
+      <div class="container events-grid">
+        <div class="events-copy" data-reveal-group>
+          <p class="eyebrow">Reservas</p>
+          <h2 class="sr-only">Camila Ponce &mdash; Reservas y servicios</h2>
+          <p class="events-lockup">
+            <span>Camila Ponce</span>
+            Reservas y servicios
+          </p>
+          <p class="lede">
+            Ademas de crear contenido, tomo citas para maquillaje de novia,
+            eventos y clases personalizadas, con el mismo cuidado que le
+            pongo a una campana de marca.
+          </p>
+          <ul class="pricing-list">
+            <li>Maquillaje de novia: prueba incluida y acompanamiento el dia del evento</li>
+            <li>Maquillaje para eventos: graduaciones, fiestas y sesiones de fotos</li>
+            <li>Clases personalizadas de automaquillaje: tecnica y productos para tu rutina</li>
+          </ul>
+          <div class="events-actions">
+            <a class="btn btn-primary" href="#contacto">Agenda tu cita</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+              Instagram @camila.ponce.mua
+            </a>
+          </div>
+        </div>
+        <div class="events-photo" data-reveal>
+          <img src="https://images.unsplash.com/photo-1621691536086-e21b2439c73a?auto=format&fit=crop&w=900&q=80" alt="Sesion de maquillaje para un evento privado" loading="lazy" />
+        </div>
+      </div>
+
+      <p class="events-videos-label">Asi preparo cada cita</p>
+      <div class="events-videos" data-reveal-group>
+        <div class="review-item" data-category="reservas">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1638628064365-f08ad0ec8245?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Como preparo un look de novia">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="reservas">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1611451444023-7fe9d86fe1d0?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Antes de una sesion de fotos">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+        <div class="review-item" data-category="reservas">
+          <div class="video-embed" data-provider="local">
+            <img class="video-embed-thumb" src="https://images.unsplash.com/photo-1533392151650-269f96231f65?auto=format&fit=crop&w=700&q=80" alt="" />
+            <div class="video-embed-scrim" aria-hidden="true"></div>
+            <button class="video-embed-placeholder" type="button" data-title="Lo que pregunto antes de cotizar">
+              <span class="video-embed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="video-embed-label">Ver video</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="pricing" id="paquetes">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">Paquetes</p>
+          <h2>Formas de colaborar</h2>
+        </div>
+        <div class="pricing-grid" data-reveal-group>
+          <article class="pricing-card">
+            <p class="pricing-name">Resena de producto</p>
+            <ul class="pricing-list">
+              <li>Publicacion en feed + reel</li>
+              <li>Mencion en historias</li>
+            </ul>
+            <p class="pricing-price">$3,500 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Tutorial dedicado</p>
+            <ul class="pricing-list">
+              <li>Video tutorial de 5 a 8 minutos</li>
+              <li>Producto protagonista en el look</li>
+            </ul>
+            <p class="pricing-price">$6,200 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Campana completa</p>
+            <ul class="pricing-list">
+              <li>3 publicaciones + reel</li>
+              <li>Sesion de fotos incluida</li>
+              <li>Uso del contenido por 3 meses</li>
+            </ul>
+            <p class="pricing-price">$14,000 <span>MXN</span></p>
+          </article>
+          <article class="pricing-card">
+            <p class="pricing-name">Evento en vivo</p>
+            <ul class="pricing-list">
+              <li>Maquillaje en vivo en tu evento</li>
+              <li>Contenido detras de camaras</li>
+              <li>Branding personalizado</li>
+            </ul>
+            <p class="pricing-price">$10,500 <span>MXN</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner" data-reveal-group>
+        <p class="eyebrow">Contacto</p>
+        <h2>&iquest;Colaboramos?</h2>
+        <p class="lede">
+          Si tu marca busca contenido real sobre resultados que se notan,
+          <strong>no un post mas de catalogo</strong>, hablemos.
+          Reviso Instagram todos los dias.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+            <span>Escribeme por Instagram</span>
+          </a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">
+            Mira mis tutoriales en YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-note">&copy; 2026 Camila Ponce. Hecho con carino.</p>
+      <span class="footer-credit">By Irv</span>
+      <nav class="social-links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" target="_blank" rel="noopener">Pinterest</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
