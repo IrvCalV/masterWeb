@@ -1,65 +1,69 @@
 /*
-  Design tokens para el catalogo (masterWeb). Paleta propia, distinta a
-  la de cualquiera de las plantillas que muestra. Segunda pasada del
-  rediseño "simple pero elegante" -- dark mode: casi todo el shell (nav,
-  hero, encabezados de tier, footer) vive sobre --bg NEGRO PURO (no un
-  casi-negro con tinte calido) para que se vea "cool" en pantallas OLED
-  (los pixeles de #000 real se apagan, a diferencia de un gris muy
-  oscuro) con texto claro; las .card siguen siendo superficies CLARAS
-  ("islas" con la miniatura real de cada plantilla) para que las fotos
-  se vean nitidas sobre un fondo neutro en vez de flotar sobre negro --
-  por eso .card redefine --ink/--ink-soft/--ink-faint de vuelta a
-  oscuro solo en su propio scope (ver cards.css). Acento champan/dorado
-  para texto/CTAs; los fondos de seccion (*-band) NO usan ese dorado --
-  se probo mezclado con el bg y leia "cafe", asi que ahora son grises
-  neutros puros, sin tinte de color, solo variando cuan claros son.
-  Serif clasica (Playfair Display, sin cursiva) para titulos.
+  Design tokens para el catalogo (masterWeb). Cuarta pasada: la paleta
+  clara "Apple Store" (parchment/casi-negro alternado) no convencio --
+  se reemplaza por un lenguaje "Liquid Glass" (el material real de
+  Apple, visionOS/iOS mas reciente): un UNICO lienzo oscuro e inmersivo
+  de principio a fin (sin alternar claro/oscuro por tier -- eso ya no
+  aplica, se elimino toda la logica [data-tile]), con una aurora de
+  gradientes de color a pantalla completa moviendose lento de fondo
+  (ver .aurora en main.css) y paneles de vidrio (blur + saturacion +
+  borde interior que simula el filo de luz refractada) flotando encima:
+  nav, cards, tabs, botones secundarios. Un solo acento solido (azul
+  sistema de iOS en dark mode) para lo interactivo -- la aurora aporta
+  el resto del color como atmosfera, no como señal de accion.
 */
 :root {
   /* --- Color --- */
-  --bg: #000000;
-  --surface: #faf8f3;
-  --surface-alt: #efe8db;
-  --ink: #f3f0e9;
-  --ink-soft: rgba(243, 240, 233, 0.68);
-  --ink-faint: rgba(243, 240, 233, 0.46);
+  --bg: #050507;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --ink: #f5f5f7;
+  --ink-soft: rgba(245, 245, 247, 0.72);
+  --ink-faint: rgba(245, 245, 247, 0.48);
 
-  --accent: #c9a25c;
-  --accent-strong: #ddbb7c;
-  --accent-dark: #8a6b2e;
-  --on-accent: #14120f;
+  --accent: #0a84ff;
+  --accent-strong: #409cff;
+  --on-accent: #ffffff;
 
-  --line: rgba(243, 240, 233, 0.14);
-  --line-strong: rgba(243, 240, 233, 0.24);
-  --shadow-soft: 0 20px 44px -24px rgba(0, 0, 0, 0.55);
-  --shadow-lift: 0 30px 60px -22px rgba(0, 0, 0, 0.6);
+  /* Paleta de la aurora de fondo -- NO se usa en elementos interactivos
+     (ver regla de "un solo acento" de design-taste-frontend); es pura
+     atmosfera detras del vidrio. */
+  --aurora-1: #3b5bff;
+  --aurora-2: #b23bff;
+  --aurora-3: #00d4c8;
+  --aurora-4: #ff3b8d;
 
-  /* Colores de las etiquetas de categoria -- una por tier/tipo. Sus
-     variantes *-bg siguen usandose para el chip claro dentro de la
-     card (verde/dorado/ciruela/azul, uno por tier, sin cambios). Los
-     *-band son grises neutros puros (sin tinte de ningun color, ni
-     verde/ciruela/azul de la primera version ni el dorado/cafe de la
-     segunda) que solo se aclaran un poco tier a tier -- la diferencia
-     entre secciones es de LUMINOSIDAD, no de tono, asi ninguna franja
-     compite en color con el negro puro de --bg ni entre si. */
-  --tag-basico: #2f9e6b;
-  --tag-basico-bg: #e4f6ed;
-  --tag-basico-band: #0a0a0a;
-  --tag-estandar: #b8850a;
-  --tag-estandar-bg: #faf0dc;
-  --tag-estandar-band: #131313;
-  --tag-completo: #b5348a;
-  --tag-completo-bg: #fbe6f3;
-  --tag-completo-band: #1c1c1c;
-  --tag-deluxe: #7c5cbf;
-  --tag-deluxe-bg: #ece6fa;
-  --tag-deluxe-band: #212121;
-  --tag-negocio: #2d6fd6;
-  --tag-negocio-bg: #e6eefc;
-  --tag-negocio-band: #262626;
+  /* "Liquid glass": blur + saturacion para el cuerpo translucido, mas un
+     borde-highlight de 1px (simulando el filo donde la luz se refracta)
+     que SIEMPRE se dibuja con box-shadow inset, nunca con border solido
+     -- asi el highlight puede ser mas claro que el borde base sin pelear
+     con el radius. */
+  --glass-blur: blur(24px) saturate(180%);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.22);
+
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --shadow-soft: 0 20px 44px -24px rgba(0, 0, 0, 0.5);
+  --shadow-lift: 0 30px 70px -20px rgba(0, 0, 0, 0.65);
+
+  /* Chips de categoria -- vidrio teñido (fondo translucido del color de
+     la marca + texto en el tono claro de esa misma familia) en vez del
+     chip pastel solido de la version anterior, pensado para la card
+     blanca que ya no existe: ahora la card tambien es vidrio oscuro. */
+  --tag-basico: #6fe3a4;
+  --tag-basico-bg: rgba(47, 158, 107, 0.18);
+  --tag-estandar: #f0c36a;
+  --tag-estandar-bg: rgba(184, 133, 10, 0.2);
+  --tag-completo: #f28bd0;
+  --tag-completo-bg: rgba(181, 52, 138, 0.2);
+  --tag-deluxe: #c3aef5;
+  --tag-deluxe-bg: rgba(124, 92, 191, 0.2);
+  --tag-negocio: #7db2f5;
+  --tag-negocio-bg: rgba(45, 111, 214, 0.2);
 
   /* --- Type --- */
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --text-xs: 0.75rem;
@@ -69,7 +73,7 @@
   --text-xl: 1.375rem;
   --text-2xl: clamp(1.6rem, 2.6vw, 2rem);
   --text-3xl: clamp(2.1rem, 4vw, 2.9rem);
-  --text-4xl: clamp(2.6rem, 6vw, 4rem);
+  --text-4xl: clamp(2.75rem, 6.4vw, 4.25rem);
 
   /* --- Spacing scale --- */
   --space-xs: 8px;
@@ -80,7 +84,10 @@
   --space-2xl: 96px;
 
   /* --- Misc --- */
-  --radius-sm: 10px;
-  --radius-md: 16px;
+  --radius-sm: 8px;
+  --radius-md: 18px;
+  --radius-pill: 999px;
   --max-width: 1240px;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }

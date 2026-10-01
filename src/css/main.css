@@ -1,5 +1,6 @@
 @import './base/reset.css';
 @import './base/variables.css';
+@import './components/scroll-reveal.css';
 @import './components/nav.css';
 @import './components/cards.css';
 @import './components/packages.css';
@@ -15,9 +16,128 @@ html {
 }
 
 body {
+  position: relative;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  Aurora: 4 manchas de gradiente radial, grandes y muy desenfocadas,
+  fijas a la pantalla (no al documento) para que la atmosfera se sienta
+  continua detras de TODAS las secciones mientras scrolleas, no como un
+  fondo por seccion. mix-blend-mode:plus-lighter (con screen de
+  respaldo para navegadores sin soporte) hace que las manchas se sumen
+  como luz en vez de taparse entre si -- asi el centro donde dos
+  colores se cruzan brilla mas, el efecto "liquido" real de refraccion
+  de luz en vez de simples blobs opacos. Cada mancha tiene su propia
+  duracion/retraso de animacion para que el patron nunca se sienta en
+  loop sincronizado. will-change + transform (nunca top/left) para que
+  el navegador anime en su propio layer sin repintar el resto de la
+  pagina en cada frame.
+*/
+.aurora {
+  position: fixed;
+  inset: -10vmax;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aurora span {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  mix-blend-mode: plus-lighter;
+  will-change: transform;
+}
+
+.aurora span:nth-child(1) {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, var(--aurora-1), transparent 70%);
+  animation: aurora-drift-1 34s var(--ease-out-soft) infinite alternate;
+}
+
+.aurora span:nth-child(2) {
+  top: 10%;
+  right: -16%;
+  background: radial-gradient(circle, var(--aurora-2), transparent 70%);
+  animation: aurora-drift-2 42s var(--ease-out-soft) infinite alternate;
+}
+
+.aurora span:nth-child(3) {
+  bottom: -18%;
+  left: 12%;
+  background: radial-gradient(circle, var(--aurora-3), transparent 70%);
+  animation: aurora-drift-3 38s var(--ease-out-soft) infinite alternate;
+}
+
+.aurora span:nth-child(4) {
+  bottom: -8%;
+  right: 6%;
+  width: 46vmax;
+  height: 46vmax;
+  background: radial-gradient(circle, var(--aurora-4), transparent 70%);
+  animation: aurora-drift-4 46s var(--ease-out-soft) infinite alternate;
+}
+
+@keyframes aurora-drift-1 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(14vmax, 10vmax) scale(1.15);
+  }
+}
+
+@keyframes aurora-drift-2 {
+  from {
+    transform: translate(0, 0) scale(1.1);
+  }
+  to {
+    transform: translate(-12vmax, 14vmax) scale(0.9);
+  }
+}
+
+@keyframes aurora-drift-3 {
+  from {
+    transform: translate(0, 0) scale(0.95);
+  }
+  to {
+    transform: translate(10vmax, -12vmax) scale(1.1);
+  }
+}
+
+@keyframes aurora-drift-4 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-10vmax, -8vmax) scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora span {
+    animation: none;
+  }
+}
+
+/* Todo el contenido real vive encima de la aurora (z-index:0) -- nav,
+   main y footer no necesitan z-index propio porque son los unicos
+   hermanos despues de .aurora en el orden del DOM y el stacking
+   context de root ya los apila encima en orden de aparicion. */
+.nav,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -35,14 +155,16 @@ h2,
 h3 {
   font-family: var(--font-display);
   font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 
 /*
   Kicker de texto en vez de chip/pastilla -- una linea corta + texto,
-  sin fondo solido. Todas las plantillas del catalogo usan algun tipo de
-  chip de color para su eyebrow; masterWeb usa este gesto mas callado a
-  proposito, para no verse como "una plantilla mas".
+  sin fondo solido. Uso deliberadamente escaso (solo Hero) -- la regla
+  anti-slop de "maximo 1 eyebrow cada 3 secciones" se respeta dejando
+  que el resto de los titulos carguen solo con su propio peso
+  tipografico.
 */
 .eyebrow {
   display: inline-flex;
@@ -61,19 +183,19 @@ h3 {
   content: '';
   width: 28px;
   height: 1.5px;
-  background: var(--accent);
+  background: currentColor;
 }
 
 /* --- Hero --- */
 .hero {
-  padding-block: var(--space-2xl) var(--space-xl);
+  padding-block: calc(var(--space-2xl) + var(--space-sm)) var(--space-xl);
 }
 
 .hero h1 {
   font-size: var(--text-4xl);
   font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   max-width: 20ch;
 }
 
@@ -107,6 +229,7 @@ h3 {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--accent-strong);
 }
 
@@ -158,7 +281,9 @@ h3 {
   Visor de plantilla: capa fija a pantalla completa con una barra
   delgada arriba (volver / titulo / abrir en pestana nueva) y un iframe
   que ocupa el resto -- ver main.js para como se abre/cierra. [hidden]
-  la saca del flujo por completo cuando no esta activa.
+  la saca del flujo por completo cuando no esta activa. z-index 200 >
+  el 1 de .nav/main/.footer para quedar siempre encima de la aurora y
+  el contenido.
 */
 .template-viewer {
   position: fixed;
@@ -186,25 +311,33 @@ h3 {
   padding: var(--space-sm) var(--space-md);
   border-bottom: 1px solid var(--line);
   background: var(--bg);
+  color: var(--ink);
 }
 
 .template-viewer-back {
   appearance: none;
-  background: rgba(243, 240, 233, 0.08);
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight);
+  border-radius: var(--radius-pill);
   padding: 8px 16px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--ink);
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
   flex-shrink: 0;
 }
 
 .template-viewer-back:hover {
-  background: rgba(243, 240, 233, 0.16);
+  background: var(--surface-strong);
+}
+
+.template-viewer-back:active {
+  transform: scale(0.95);
 }
 
 .template-viewer-title {

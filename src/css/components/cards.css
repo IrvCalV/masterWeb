@@ -1,7 +1,10 @@
 /*
   Tira de tabs para filtrar por tier/categoria -- JS solo agrega/quita
   [hidden] a los .tier-block y calcula si un .catalog-group entero debe
-  esconderse (cuando ninguno de sus bloques quedo visible).
+  esconderse (cuando ninguno de sus bloques quedo visible). Vidrio
+  translucido en reposo (se ve la aurora detras, atenuada); el estado
+  activo es el unico momento donde un tab se vuelve solido (acento azul
+  lleno), para que el filtro activo destaque sobre el resto del vidrio.
 */
 .filter-tabs {
   display: flex;
@@ -12,27 +15,36 @@
 
 .filter-tab {
   appearance: none;
-  background: none;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight);
+  border-radius: var(--radius-pill);
   padding: 9px 18px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
   color: var(--ink-soft);
   cursor: pointer;
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease,
+    transform 0.15s ease;
 }
 
 .filter-tab:hover {
-  border-color: var(--accent);
+  border-color: rgba(255, 255, 255, 0.3);
   color: var(--ink);
 }
 
+.filter-tab:active {
+  transform: scale(0.95);
+}
+
 .filter-tab.is-active {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: none;
+  color: var(--on-accent);
 }
 
 .catalog-group {
@@ -43,6 +55,7 @@
   font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 600;
+  letter-spacing: -0.025em;
   margin-bottom: var(--space-xs);
 }
 
@@ -53,13 +66,13 @@
 }
 
 /*
-  Cada tier vive en su propia franja a todo lo ancho del viewport --
-  fondo tomado de --tag-*-band (un casi-negro con el tinte de la misma
-  familia de color que ya usa su card-tag), asi cada categoria se siente
-  como un cambio de escenario sin salirse de la paleta oscura general.
-  El "quiebre" fuera del .container centrado es puro CSS (margin/padding
-  con vw), sin tocar el HTML: el fondo llega a los bordes del viewport
-  pero el contenido interno sigue alineado al mismo ancho de siempre.
+  Cada tier vive en su propia franja a todo lo ancho del viewport, pero
+  ya no cambia de color de fondo (ese era el ritmo "Apple Store" claro/
+  oscuro de la pasada anterior) -- la aurora fija detras es la misma en
+  toda la pagina; aqui solo se mantiene el quiebre full-bleed para que
+  .tier-note y el padding-block respiren igual que antes. El "quiebre"
+  fuera del .container centrado es puro CSS (margin/padding con vw),
+  sin tocar el HTML.
 */
 .tier-block {
   margin-inline: calc(50% - 50vw);
@@ -79,26 +92,6 @@
   border-top: 1px solid var(--line);
 }
 
-.tier-block[data-tier='basico'] {
-  background: var(--tag-basico-band);
-}
-
-.tier-block[data-tier='estandar'] {
-  background: var(--tag-estandar-band);
-}
-
-.tier-block[data-tier='completo'] {
-  background: var(--tag-completo-band);
-}
-
-.tier-block[data-tier='deluxe'] {
-  background: var(--tag-deluxe-band);
-}
-
-.tier-block[data-tier='negocio'] {
-  background: var(--tag-negocio-band);
-}
-
 .tier-head {
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +104,7 @@
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .tier-head .tier-price {
@@ -134,39 +128,42 @@
 }
 
 /*
-  .card es una "isla" clara sobre el fondo oscuro del tier -- redefine
-  --ink/--ink-soft/--ink-faint de vuelta a oscuro solo en su propio
-  scope (igual patron que .hero/.footer usan a la inversa en varias
-  plantillas del catalogo), asi las miniaturas reales se ven nitidas
-  sobre una superficie neutra y el titulo/descripcion adentro siguen
-  siendo legibles en tinta oscura sin tocar los tokens globales.
+  Liquid glass real: blur+saturate sobre la aurora que corre detras de
+  toda la pagina (no un color solido), con un highlight de 1px arriba
+  via box-shadow inset (el filo donde la luz "se refracta") en vez de
+  un borde parejo en los 4 lados -- asi el panel se siente como una
+  superficie con grosor, no una caja plana. La miniatura de la
+  plantilla (.card-thumb) no lleva blur -- solo el marco de vidrio
+  alrededor, para que la foto siga viendose nitida.
 */
 .card {
-  --ink: #201d18;
-  --ink-soft: rgba(32, 29, 24, 0.66);
-  --ink-faint: rgba(32, 29, 24, 0.44);
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: var(--ink);
   background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.3s var(--ease-out-soft), box-shadow 0.3s var(--ease-out-soft),
+    background 0.3s ease;
 }
 
 .card:hover,
 .card:focus-visible {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lift);
+  background: var(--surface-strong);
+  box-shadow: var(--glass-highlight), var(--shadow-lift);
 }
 
 .card-thumb {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--surface-alt);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .card-thumb img {
@@ -174,7 +171,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
-  transition: transform 0.35s ease;
+  transition: transform 0.4s var(--ease-out-soft);
 }
 
 .card:hover .card-thumb img {
@@ -187,7 +184,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(33, 29, 24, 0.45);
+  background: rgba(5, 5, 7, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -215,12 +214,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--surface);
-  color: var(--ink);
+  background: #ffffff;
+  color: #14141a;
   font-size: var(--text-sm);
   font-weight: 600;
   padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 .card-body {
@@ -238,7 +237,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
 }
 
 .card-tag--basico {
@@ -270,6 +269,8 @@
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
 }
 
 .card-desc {

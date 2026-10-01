@@ -1,3 +1,5 @@
+import { initScrollReveal } from './scroll-reveal.js';
+
 // Filtro de categorias: los tabs solo agregan/quitan [hidden] a los
 // .tier-block que no coinciden, y esconden un .catalog-group completo
 // si ninguno de sus bloques quedo visible (por ejemplo, "Negocios"
@@ -201,3 +203,4 @@ initMobileNav();
 initTemplateViewer();
 initTouchHoverPreview('.card');
 initTouchHoverPreview('.package-card, .support-card');
+initScrollReveal();

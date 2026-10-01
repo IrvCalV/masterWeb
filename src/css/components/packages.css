@@ -1,14 +1,8 @@
 /*
-  Paquetes y Soporte: mismas tarjetas oscuras con borde (no la isla clara
-  de .card, que esta reservada a miniaturas de plantillas) para que
-  precios y alcance se lean como informacion del propio catalogo, no
-  como otra plantilla mas.
+  Paquetes y Soporte: mismo panel de vidrio que .card (ver cards.css) --
+  blur+saturate sobre la aurora, highlight de 1px arriba via box-shadow
+  inset en vez de borde parejo.
 */
-
-/* .packages viene justo despues del ultimo tier-block del catalogo, que
-   ya aporta su propia banda de color con padding-block grande -- el
-   padding-top generico de <section> (96px) encima de eso se sentia como
-   un salto enorme antes de llegar a "Paquetes". */
 .packages,
 .support {
   padding-top: var(--space-lg);
@@ -35,10 +29,14 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding: var(--space-md);
-  border: 1px solid var(--line);
+  background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight);
   border-radius: var(--radius-md);
-  background: rgba(243, 240, 233, 0.03);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.3s var(--ease-out-soft),
+    box-shadow 0.3s var(--ease-out-soft);
 }
 
 /* .package-card es un <a> -- enlaza al tier correspondiente del
@@ -54,7 +52,8 @@
 .package-card:focus-visible,
 .package-card.is-touch-active,
 .support-card.is-touch-active {
-  border-color: var(--accent);
+  background: var(--surface-strong);
+  box-shadow: var(--glass-highlight), var(--shadow-lift);
   transform: translateY(-4px);
 }
 
@@ -77,6 +76,7 @@
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .package-price,

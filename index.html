@@ -10,11 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
   />
   <link rel="stylesheet" href="./src/css/main.css" />
 </head>
 <body>
+  <div class="aurora" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <header class="nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#top">MasterWeb <span>Catálogo</span></a>
@@ -35,7 +42,7 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="container">
+      <div class="container" data-reveal-group>
         <p class="eyebrow">Catálogo de plantillas</p>
         <h1>Encuentra la plantilla perfecta para tu marca</h1>
         <p class="lede">
@@ -44,7 +51,7 @@
         </p>
         <div class="hero-stats">
           <div class="hero-stat">
-            <strong>11</strong>
+            <strong>19</strong>
             <span>Plantillas</span>
           </div>
           <div class="hero-stat">
@@ -74,12 +81,14 @@
 
         <!-- CREADORES DE CONTENIDO -->
         <div class="catalog-group" id="creadores">
-          <h2>Creadores de contenido</h2>
-          <p class="catalog-group-lede">
-            Media kits y portafolios para creadoras y creadores UGC, y landings
-            sencillas para negocios que buscan presencia web. Tres niveles
-            según cuántas secciones y funciones necesites.
-          </p>
+          <div data-reveal-group>
+            <h2>Creadores de contenido</h2>
+            <p class="catalog-group-lede">
+              Media kits y portafolios para creadoras y creadores UGC, y landings
+              sencillas para negocios que buscan presencia web. Tres niveles
+              según cuántas secciones y funciones necesites.
+            </p>
+          </div>
 
           <!-- BASICO -->
           <div class="tier-block" data-tier="basico" id="tier-basico">
@@ -88,7 +97,7 @@
               <span class="tier-price">Desde $1,500 MXN</span>
             </div>
             <p class="tier-note">Solo fotos, sin animaciones. Hasta 8 fotos, sin video. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
-            <div class="card-grid">
+            <div class="card-grid" data-reveal-group>
               <a class="card" href="./templates/basico-1/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/basico-1.png" alt="" loading="lazy" />
@@ -146,7 +155,7 @@
               <span class="tier-price">Desde $2,400 MXN</span>
             </div>
             <p class="tier-note">Fotos y video, animaciones de texto limitadas, galería más amplia que Básico. Hasta 15 fotos y 5 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
-            <div class="card-grid">
+            <div class="card-grid" data-reveal-group>
               <a class="card" href="./templates/estandar-1/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/estandar-1.png" alt="" loading="lazy" />
@@ -204,7 +213,7 @@
               <span class="tier-price">Desde $4,000 MXN</span>
             </div>
             <p class="tier-note">Fotos y video con transiciones, personalización avanzada. Hasta 20 fotos y 8 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
-            <div class="card-grid">
+            <div class="card-grid" data-reveal-group>
               <a class="card" href="./templates/completo-1/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/completo-1.png" alt="" loading="lazy" />
@@ -262,7 +271,7 @@
               <span class="tier-price">Desde $6,000 MXN</span>
             </div>
             <p class="tier-note">Máxima personalización y producción: varios formatos de contenido combinados en un solo sitio. Hasta 30 fotos y 10 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
-            <div class="card-grid">
+            <div class="card-grid" data-reveal-group>
               <a class="card" href="./templates/cv/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/cv.png" alt="" loading="lazy" />
@@ -316,11 +325,13 @@
 
         <!-- NEGOCIOS -->
         <div class="catalog-group" id="negocios">
-          <h2>Páginas para negocios</h2>
-          <p class="catalog-group-lede">
-            Sitios multi-página para negocios locales: catálogo de productos,
-            servicios, reservas y contacto.
-          </p>
+          <div data-reveal-group>
+            <h2>Páginas para negocios</h2>
+            <p class="catalog-group-lede">
+              Sitios multi-página para negocios locales: catálogo de productos,
+              servicios, reservas y contacto.
+            </p>
+          </div>
 
           <div class="tier-block" data-tier="negocio" id="tier-negocio">
             <div class="tier-head">
@@ -328,7 +339,7 @@
               <span class="tier-price">Desde $6,000 – $10,000+ MXN</span>
             </div>
             <p class="tier-note">Sitio multi-página a la medida: catálogo, servicios, reservas y contacto. Hasta 35 fotos y 12 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
-            <div class="card-grid">
+            <div class="card-grid" data-reveal-group>
               <a class="card" href="./templates/soart/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/soart.png" alt="" loading="lazy" />
@@ -373,14 +384,13 @@
     <!-- PAQUETES -->
     <section class="packages" id="paquetes">
       <div class="container">
-        <p class="eyebrow">Precios</p>
-        <h2>Paquetes</h2>
-        <p class="section-lede">
+        <h2 data-reveal>Paquetes</h2>
+        <p class="section-lede" data-reveal>
           Cada paquete parte de una plantilla del catálogo. El precio varía
           según cuánto contenido y personalización necesita tu sitio.
         </p>
 
-        <div class="package-grid">
+        <div class="package-grid" data-reveal-group>
           <a class="package-card" href="#tier-basico">
             <div class="package-head">
               <h3>Básico</h3>
@@ -437,10 +447,9 @@
     <!-- SOPORTE Y MODIFICACIONES -->
     <section class="support" id="soporte">
       <div class="container">
-        <p class="eyebrow">Después de la entrega</p>
-        <h2>Soporte y modificaciones</h2>
+        <h2 data-reveal>Soporte y modificaciones</h2>
 
-        <div class="support-grid">
+        <div class="support-grid" data-reveal-group>
           <div class="support-card">
             <h3>Cambio puntual</h3>
             <span class="support-price">$300 MXN</span>
@@ -474,8 +483,7 @@
 
     <!-- CONTACTO -->
     <section class="contact" id="contacto">
-      <div class="container">
-        <p class="eyebrow">Contacto</p>
+      <div class="container" data-reveal-group>
         <h2>¿Listo para tu plantilla?</h2>
         <p class="section-lede">Escríbenos por WhatsApp o síguenos en Instagram para ver más ejemplos.</p>
         <div class="contact-actions">

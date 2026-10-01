@@ -1,0 +1,33 @@
+/*
+  Scroll-reveal motivado: hierarchy + entrada narrativa, no decoracion
+  porque si (ver design-taste-frontend 5 "MOTION MUST BE MOTIVATED").
+  [data-reveal] revela el elemento completo como una unidad;
+  [data-reveal-group] revela cada hijo directo por separado con un
+  stagger via --reveal-delay (seteado inline por scroll-reveal.js) --
+  asi una grilla de cards entra en cascada en vez de de un solo golpe.
+  prefers-reduced-motion se respeta de raiz: sin esa media query el
+  contenido nace invisible y JS nunca llega a dispararlo para quien no
+  quiere motion.
+*/
+[data-reveal],
+[data-reveal-group] > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease-out-soft), transform 0.6s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible,
+[data-reveal-group] > *.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-group] > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
