@@ -25,13 +25,15 @@
   --accent-strong: #409cff;
   --on-accent: #ffffff;
 
-  /* Paleta de la aurora de fondo -- NO se usa en elementos interactivos
-     (ver regla de "un solo acento" de design-taste-frontend); es pura
-     atmosfera detras del vidrio. */
-  --aurora-1: #3b5bff;
-  --aurora-2: #b23bff;
-  --aurora-3: #00d4c8;
-  --aurora-4: #ff3b8d;
+  /* Paleta de la aurora de fondo -- monocromatica en la familia del
+     acento (de marino profundo a celeste suave) en vez de la mezcla
+     violeta/cian/rosa anterior, que no convencio. NO se usa en
+     elementos interactivos (ver regla de "un solo acento" de
+     design-taste-frontend); es pura atmosfera detras del vidrio. */
+  --aurora-1: #0a84ff;
+  --aurora-2: #1e3a8a;
+  --aurora-3: #60a5fa;
+  --aurora-4: #2563eb;
 
   /* "Liquid glass": blur + saturacion para el cuerpo translucido, mas un
      borde-highlight de 1px (simulando el filo donde la luz se refracta)

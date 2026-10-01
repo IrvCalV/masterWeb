@@ -1,8 +1,11 @@
 /*
-  Nav como panel de vidrio real: fill muy translucido (se ve la aurora
-  moviendose detras al scrollear) + blur/saturate + highlight de 1px
-  abajo via box-shadow en vez de un border-bottom solido -- consistente
-  con .card/.package-card/.filter-tab (ver cards.css, packages.css).
+  "global-nav" a la Apple: barra siempre oscura (no transparente sobre
+  el contenido que pasa debajo), para que nav-brand/nav-links puedan
+  usar un solo color fijo sin importar si la seccion que esta scrolleando
+  detras es la banda clara o la oscura del ritmo alternado -- ver
+  main.css [data-tile='dark']. El blur/saturate sigue aplicado encima del
+  fondo oscuro solo para la sensacion "vidrio", no para dejar ver colores
+  de abajo.
 */
 .nav {
   position: sticky;
@@ -141,7 +144,7 @@
     margin-inline: calc(50% - 50vw);
     padding-inline: calc(50vw - 50% + var(--space-sm));
     padding-block: var(--space-xs);
-    background: rgba(5, 5, 7, 0.85);
+    background: rgba(5, 5, 7, 0.97);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     box-shadow: inset 0 -1px 0 var(--glass-border), var(--shadow-soft);
