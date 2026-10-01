@@ -150,6 +150,16 @@
   overflow: hidden;
   transition: transform 0.3s var(--ease-out-soft), box-shadow 0.3s var(--ease-out-soft),
     background 0.3s ease;
+  /* Con 19 tarjetas, cada una recalculando backdrop-filter sobre la
+     aurora animada de fondo todo el tiempo que esten en el DOM (aunque
+     esten fuera de pantalla) es carga continua de GPU. content-visibility
+     le dice al navegador que se salte layout/paint/backdrop-filter de las
+     que no se ven -- Chrome/Edge lo soportan, Safari lo ignora sin
+     romper nada (degrada a como estaba antes). contain-intrinsic-size
+     evita que la pagina salte de alto mientras no se ha medido la
+     tarjeta real. */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 380px;
 }
 
 .card:focus-visible {

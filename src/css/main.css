@@ -50,7 +50,14 @@ body {
   width: 60vmax;
   height: 60vmax;
   border-radius: 50%;
-  filter: blur(80px);
+  /* 50px en vez de 80px -- el costo de un blur de GPU escala con el
+     cuadrado del radio, asi que bajar esto reduce bastante el trabajo
+     continuo del compositor (estas 4 manchas nunca dejan de animarse
+     mientras la pestana este abierta, y encima el fondo pasa por otros
+     ~29 backdrop-filter de .card/.package-card/.filter-tab en cada
+     frame -- ver cards.css). El degradado ya se desvanece en
+     "transparent 70%", asi que menos blur casi no se nota. */
+  filter: blur(50px);
   opacity: 0.5;
   mix-blend-mode: screen;
   mix-blend-mode: plus-lighter;

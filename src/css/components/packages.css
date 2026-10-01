@@ -37,6 +37,8 @@
   border-radius: var(--radius-md);
   transition: background 0.2s ease, transform 0.3s var(--ease-out-soft),
     box-shadow 0.3s var(--ease-out-soft);
+  content-visibility: auto;
+  contain-intrinsic-size: 0 220px;
 }
 
 /* .package-card es un <a> -- enlaza al tier correspondiente del

@@ -40,12 +40,11 @@
      que SIEMPRE se dibuja con box-shadow inset, nunca con border solido
      -- asi el highlight puede ser mas claro que el borde base sin pelear
      con el radius. */
-  --glass-blur: blur(24px) saturate(180%);
+  --glass-blur: blur(16px) saturate(150%);
   --glass-border: rgba(255, 255, 255, 0.14);
   --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.22);
 
   --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.22);
   --shadow-soft: 0 20px 44px -24px rgba(0, 0, 0, 0.5);
   --shadow-lift: 0 30px 70px -20px rgba(0, 0, 0, 0.65);
 
@@ -86,7 +85,6 @@
   --space-2xl: 96px;
 
   /* --- Misc --- */
-  --radius-sm: 8px;
   --radius-md: 18px;
   --radius-pill: 999px;
   --max-width: 1240px;
