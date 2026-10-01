@@ -32,33 +32,22 @@ function initCatalogFilter() {
 // cualquier animacion o audio de la plantilla se detenga de verdad, no
 // siga sonando oculto.
 //
-// Historial: abrir una plantilla mete un estado nuevo con pushState, asi
-// que el boton "atras" del navegador (no solo el boton "Volver" de la
-// barra ni Esc) tambien cierra el visor -- los tres disparan el mismo
-// popstate en vez de cada uno cerrando la capa por su cuenta, para que
-// nunca queden desincronizados.
+// Historial: abrir una plantilla mete un estado nuevo con pushState
+// solo para que el boton FISICO/gesto de "atras" del navegador tambien
+// cierre el visor (bonus, via el listener de popstate). El boton propio
+// "Volver al catalogo" (y Esc) NUNCA usa history.back()/history.go(): lo
+// cierran llamando a hideViewer() directamente y sin importar cuantas
+// entradas de historial se hayan acumulado. Eso importa porque cada
+// click en un <a href="#seccion"> DENTRO de la plantilla (ej.
+// "Servicios", "Sobre mi" en Negocios) mete su propia entrada al
+// historial conjunto de la pestana -- si "Volver" dependiera de contar
+// pasos de historial, un click ahi desviaria el conteo y el boton a
+// veces se quedaria a medio camino en vez de regresar directo al
+// catalogo. Con un cierre directo eso ya no puede pasar.
 //
 // frame.contentWindow.location.replace() en vez de frame.src=: asignar
-// .src hace que el iframe navegue metiendo SU PROPIA entrada en el
-// historial conjunto de la pestana, ademas de la que ya mete nuestro
-// pushState -- dos entradas por cada apertura en vez de una. Eso
-// desincroniza el conteo despues del segundo ciclo de abrir/cerrar (un
-// "atras" a veces cierra, a veces deja el visor a medio abrir).
-// .replace() navega el iframe sin agregar entrada, asi que solo queda la
-// entrada que nosotros mismos controlamos.
-//
-// Navegacion interna por anclas DENTRO de la plantilla (ej. "Servicios",
-// "Sobre mi" en Negocios): cada click en un <a href="#seccion"> del
-// iframe mete su propia entrada al historial conjunto de la pestana,
-// aunque esa entrada le pertenezca al iframe y no a esta pagina -- por
-// eso history.state (el de ESTA pagina) se queda en {viewerOpen:true,...}
-// sin cambiar durante esos clicks. Un history.back() de un solo paso
-// entonces solo deshace la ultima ancla del iframe, no cierra el visor
-// -- hay que apretar "Volver" una vez por cada seccion visitada. Para
-// que "Volver al catalogo" siempre regrese de un salto sin importar
-// cuantas anclas se hayan clickeado adentro, guardamos history.length
-// justo ANTES de nuestro pushState (openedAtLength) y calculamos cuantos
-// pasos hay que retroceder para aterrizar exactamente ahi.
+// .src hace que el iframe navegue metiendo su propia entrada en el
+// historial conjunto de la pestana. .replace() lo evita.
 function initTemplateViewer() {
   const viewer = document.getElementById('templateViewer');
   const frame = document.getElementById('templateViewerFrame');
@@ -66,7 +55,6 @@ function initTemplateViewer() {
   const newTabLink = document.getElementById('templateViewerNewTab');
   const backButton = document.getElementById('templateViewerBack');
   const cards = document.querySelectorAll('.card[href]');
-  let openedAtLength = null;
 
   function navigateFrame(url) {
     frame.contentWindow.location.replace(url);
@@ -80,6 +68,17 @@ function initTemplateViewer() {
     document.body.style.overflow = 'hidden';
   }
 
+  // Cierre directo: siempre vuelve al catalogo de un salto, sin importar
+  // cuantas anclas internas o entradas de historial haya acumulado la
+  // plantilla mientras estaba abierta.
+  function closeViewer() {
+    if (viewer.hidden) return;
+    hideViewer();
+    if (history.state && history.state.viewerOpen) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+
   function hideViewer() {
     viewer.hidden = true;
     navigateFrame('about:blank');
@@ -91,31 +90,22 @@ function initTemplateViewer() {
       event.preventDefault();
       const label = card.querySelector('.card-title')?.textContent ?? '';
       const url = card.getAttribute('href');
-      openedAtLength = history.length;
       history.pushState({ viewerOpen: true, url, label }, '', '#plantilla');
       showViewer(url, label);
     });
   });
 
-  // El boton "Volver" y Esc solo retroceden el historial -- es el
-  // listener de popstate el que de verdad cierra el visor, para que los
-  // tres caminos (boton, Esc, boton fisico/gesto de atras) queden
-  // siempre sincronizados con el estado real de la URL.
-  backButton.addEventListener('click', () => {
-    if (history.state && history.state.viewerOpen) {
-      const stepsBack = openedAtLength !== null ? history.length - openedAtLength : 1;
-      history.go(-Math.max(stepsBack, 1));
-    } else {
-      hideViewer();
-    }
-  });
+  backButton.addEventListener('click', closeViewer);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !viewer.hidden) {
-      backButton.click();
+      closeViewer();
     }
   });
 
+  // Fallback para el boton/gesto FISICO de "atras" del navegador -- ese
+  // si depende del historial porque el navegador ya decidio navegar por
+  // su cuenta; aqui solo reaccionamos al estado en el que aterrizo.
   window.addEventListener('popstate', (event) => {
     if (event.state && event.state.viewerOpen) {
       showViewer(event.state.url, event.state.label);
@@ -125,5 +115,57 @@ function initTemplateViewer() {
   });
 }
 
+// Equivalente tactil de los :hover de escritorio -- touchstart agrega
+// .is-touch-active (la misma clase que ya definen cards.css y
+// packages.css para replicar cada :hover: "ligero aumento + Ver
+// plantilla" en las miniaturas, borde dorado + elevacion en las
+// tarjetas de precio). Ningun listener llama preventDefault, asi el
+// scroll normal de la pagina nunca se bloquea. touchmove mas alla de un
+// pequeno umbral cancela el efecto -- eso es un dedo haciendo scroll, no
+// un tap sobre la tarjeta.
+function initTouchHoverPreview(selector) {
+  const cards = document.querySelectorAll(selector);
+  const MOVE_THRESHOLD = 10;
+
+  cards.forEach((card) => {
+    let startX = 0;
+    let startY = 0;
+
+    card.addEventListener(
+      'touchstart',
+      (event) => {
+        const touch = event.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        card.classList.add('is-touch-active');
+      },
+      { passive: true }
+    );
+
+    card.addEventListener(
+      'touchmove',
+      (event) => {
+        const touch = event.touches[0];
+        const movedX = Math.abs(touch.clientX - startX);
+        const movedY = Math.abs(touch.clientY - startY);
+        if (movedX > MOVE_THRESHOLD || movedY > MOVE_THRESHOLD) {
+          card.classList.remove('is-touch-active');
+        }
+      },
+      { passive: true }
+    );
+
+    card.addEventListener('touchend', () => {
+      card.classList.remove('is-touch-active');
+    });
+
+    card.addEventListener('touchcancel', () => {
+      card.classList.remove('is-touch-active');
+    });
+  });
+}
+
 initCatalogFilter();
 initTemplateViewer();
+initTouchHoverPreview('.card');
+initTouchHoverPreview('.package-card, .support-card');

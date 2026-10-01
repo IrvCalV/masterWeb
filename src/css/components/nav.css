@@ -28,6 +28,7 @@
   font-size: var(--text-lg);
   text-decoration: none;
   color: var(--ink);
+  flex-shrink: 0;
 }
 
 .nav-brand span {
@@ -46,9 +47,11 @@
   display: flex;
   align-items: center;
   gap: var(--space-lg);
+  min-width: 0;
 }
 
 .nav-links a {
+  flex-shrink: 0;
   font-size: var(--text-sm);
   font-weight: 500;
   text-decoration: none;
@@ -68,5 +71,23 @@
 
   .nav-links a {
     font-size: var(--text-xs);
+  }
+}
+
+/*
+  4 links + marca ya no caben en una sola fila comoda en telefonos
+  angostos -- en vez de envolver (rompe la barra sticky a dos lineas) o
+  esconder enlaces, el propio nav-links se vuelve scrolleable
+  horizontalmente. No afecta el scroll vertical de la pagina.
+*/
+@media (max-width: 420px) {
+  .nav-links {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 }

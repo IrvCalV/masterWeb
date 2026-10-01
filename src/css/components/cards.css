@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  padding-block: var(--space-lg) var(--space-xl);
+  padding-block: var(--space-xs) var(--space-lg);
 }
 
 .filter-tab {
@@ -36,7 +36,7 @@
 }
 
 .catalog-group {
-  padding-block: var(--space-2xl) var(--space-lg);
+  padding-block: var(--space-md) var(--space-md);
 }
 
 .catalog-group > h2 {
@@ -69,6 +69,10 @@
      resto del sitio. */
   padding-inline: calc(50vw - 50% + var(--space-sm));
   padding-block: var(--space-xl);
+  /* Las tarjetas de Paquetes enlazan directo a su tier (#tier-basico,
+     etc.) -- sin esto el nav sticky de arriba tapa el encabezado del
+     tier al aterrizar el scroll. */
+  scroll-margin-top: 80px;
 }
 
 .tier-block + .tier-block {
@@ -85,6 +89,10 @@
 
 .tier-block[data-tier='completo'] {
   background: var(--tag-completo-band);
+}
+
+.tier-block[data-tier='deluxe'] {
+  background: var(--tag-deluxe-band);
 }
 
 .tier-block[data-tier='negocio'] {
@@ -189,6 +197,20 @@
   opacity: 1;
 }
 
+/*
+  Equivalente tactil del :hover de arriba -- main.js agrega/quita esta
+  clase en touchstart/touchend (sin preventDefault en ningun touch* para
+  no interferir con el scroll), asi un tap en movil muestra el mismo
+  "ligero aumento + Ver plantilla" que el mouse en desktop.
+*/
+.card.is-touch-active .card-thumb img {
+  transform: scale(1.04);
+}
+
+.card.is-touch-active .card-thumb-scrim {
+  opacity: 1;
+}
+
 .card-thumb-scrim span {
   display: inline-flex;
   align-items: center;
@@ -232,6 +254,11 @@
 .card-tag--completo {
   color: var(--tag-completo);
   background: var(--tag-completo-bg);
+}
+
+.card-tag--deluxe {
+  color: var(--tag-deluxe);
+  background: var(--tag-deluxe-bg);
 }
 
 .card-tag--negocio {

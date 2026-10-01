@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MasterWeb &middot; Catálogo de plantillas</title>
-  <meta name="description" content="Catálogo de plantillas para creadores de contenido y negocios: básico, estándar, completo y sitios de negocio." />
+  <meta name="description" content="Catálogo de plantillas para creadores de contenido y negocios: básico, estándar, completo, deluxe y sitios de negocio." />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,6 +21,8 @@
       <nav class="nav-links">
         <a href="#creadores">Creadores</a>
         <a href="#negocios">Negocios</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -41,7 +43,7 @@
             <span>Plantillas</span>
           </div>
           <div class="hero-stat">
-            <strong>4</strong>
+            <strong>5</strong>
             <span>Categorías</span>
           </div>
           <div class="hero-stat">
@@ -55,24 +57,27 @@
     <!-- CATALOGO -->
     <section class="catalog">
       <div class="container">
-        <div class="filter-tabs" role="tablist" aria-label="Filtrar plantillas">
+        <p class="eyebrow" id="filters-label">Filtros</p>
+        <div class="filter-tabs" role="tablist" aria-label="Filtrar plantillas" aria-labelledby="filters-label">
           <button class="filter-tab is-active" data-filter="all" type="button">Todos</button>
           <button class="filter-tab" data-filter="basico" type="button">Básico</button>
           <button class="filter-tab" data-filter="estandar" type="button">Estándar</button>
           <button class="filter-tab" data-filter="completo" type="button">Completo</button>
-          <button class="filter-tab" data-filter="negocio" type="button">Negocios</button>
+          <button class="filter-tab" data-filter="deluxe" type="button">Deluxe</button>
+          <button class="filter-tab" data-filter="negocio" type="button">Empresarial</button>
         </div>
 
         <!-- CREADORES DE CONTENIDO -->
         <div class="catalog-group" id="creadores">
           <h2>Creadores de contenido</h2>
           <p class="catalog-group-lede">
-            Media kits y portafolios para creadoras y creadores UGC, en tres
-            niveles según cuántas secciones y funciones necesites.
+            Media kits y portafolios para creadoras y creadores UGC, y landings
+            sencillas para negocios que buscan presencia web. Tres niveles
+            según cuántas secciones y funciones necesites.
           </p>
 
           <!-- BASICO -->
-          <div class="tier-block" data-tier="basico">
+          <div class="tier-block" data-tier="basico" id="tier-basico">
             <div class="tier-head">
               <h3>Básico</h3>
               <span class="tier-price">Desde $1,500 MXN</span>
@@ -118,10 +123,10 @@
           </div>
 
           <!-- ESTANDAR -->
-          <div class="tier-block" data-tier="estandar">
+          <div class="tier-block" data-tier="estandar" id="tier-estandar">
             <div class="tier-head">
               <h3>Estándar</h3>
-              <span class="tier-price">Desde $2,500 MXN</span>
+              <span class="tier-price">Desde $2,400 MXN</span>
             </div>
             <p class="tier-note">Fotos y video, animaciones de texto limitadas, galería más amplia que Básico. Hasta 15 fotos y 5 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
             <div class="card-grid">
@@ -164,25 +169,13 @@
           </div>
 
           <!-- COMPLETO -->
-          <div class="tier-block" data-tier="completo">
+          <div class="tier-block" data-tier="completo" id="tier-completo">
             <div class="tier-head">
               <h3>Completo</h3>
-              <span class="tier-price">Desde $3,000 MXN</span>
+              <span class="tier-price">Desde $4,000 MXN</span>
             </div>
-            <p class="tier-note">Fotos y video con transiciones, máxima personalización. Hasta 30 fotos y 10 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
+            <p class="tier-note">Fotos y video con transiciones, personalización avanzada. Hasta 20 fotos y 8 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
             <div class="card-grid">
-              <a class="card" href="./templates/cv/index.html">
-                <div class="card-thumb">
-                  <img src="./thumbnails/cv.png" alt="" loading="lazy" />
-                  <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
-                </div>
-                <div class="card-body">
-                  <span class="card-tag card-tag--completo">Completo</span>
-                  <h3 class="card-title">Reseñas &amp; terapia holística</h3>
-                  <p class="card-desc">Verde salvia y crema con serif editorial — reseñas en video, marcas, podcast y terapia holística en una sola página.</p>
-                </div>
-              </a>
-
               <a class="card" href="./templates/completo-1/index.html">
                 <div class="card-thumb">
                   <img src="./thumbnails/completo-1.png" alt="" loading="lazy" />
@@ -208,6 +201,28 @@
               </a>
             </div>
           </div>
+
+          <!-- DELUXE -->
+          <div class="tier-block" data-tier="deluxe" id="tier-deluxe">
+            <div class="tier-head">
+              <h3>Deluxe</h3>
+              <span class="tier-price">Desde $6,000 MXN</span>
+            </div>
+            <p class="tier-note">Máxima personalización y producción: varios formatos de contenido combinados en un solo sitio. Hasta 30 fotos y 10 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
+            <div class="card-grid">
+              <a class="card" href="./templates/cv/index.html">
+                <div class="card-thumb">
+                  <img src="./thumbnails/cv.png" alt="" loading="lazy" />
+                  <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
+                </div>
+                <div class="card-body">
+                  <span class="card-tag card-tag--deluxe">Deluxe</span>
+                  <h3 class="card-title">Reseñas &amp; terapia holística</h3>
+                  <p class="card-desc">Verde salvia y crema con serif editorial — reseñas en video, marcas, podcast y terapia holística en una sola página.</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- NEGOCIOS -->
@@ -218,10 +233,10 @@
             servicios, reservas y contacto.
           </p>
 
-          <div class="tier-block" data-tier="negocio">
+          <div class="tier-block" data-tier="negocio" id="tier-negocio">
             <div class="tier-head">
-              <h3>Negocios</h3>
-              <span class="tier-price">$6,000 – $10,000 MXN</span>
+              <h3>Empresarial / Multipágina</h3>
+              <span class="tier-price">Desde $6,000 – $10,000+ MXN</span>
             </div>
             <p class="tier-note">Sitio multi-página a la medida: catálogo, servicios, reservas y contacto. Hasta 35 fotos y 12 videos. +$200 MXN por cada sección adicional no incluida en la plantilla.</p>
             <div class="card-grid">
@@ -231,7 +246,7 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">SoArt · Bolsos de piel</h3>
                   <p class="card-desc">E-commerce de bolsos: catálogo, vista rápida de producto y colecciones por género.</p>
                 </div>
@@ -243,7 +258,7 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">Milpa · Restaurante</h3>
                   <p class="card-desc">Cocina mexicana de raíz: menú completo por categorías, reservaciones y ficha de contacto.</p>
                 </div>
@@ -255,13 +270,148 @@
                   <div class="card-thumb-scrim"><span>Ver plantilla →</span></div>
                 </div>
                 <div class="card-body">
-                  <span class="card-tag card-tag--negocio">Negocio</span>
+                  <span class="card-tag card-tag--negocio">Empresarial</span>
                   <h3 class="card-title">Lúmina · Clínica Dental</h3>
                   <p class="card-desc">Odontología y estética facial: catálogo de tratamientos, confianza/credenciales y agenda de citas.</p>
                 </div>
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section class="packages" id="paquetes">
+      <div class="container">
+        <p class="eyebrow">Precios</p>
+        <h2>Paquetes</h2>
+        <p class="section-lede">
+          Cada paquete parte de una plantilla del catálogo. El precio varía
+          según cuánto contenido y personalización necesita tu sitio.
+        </p>
+
+        <div class="package-grid">
+          <a class="package-card" href="#tier-basico">
+            <div class="package-head">
+              <h3>Básico</h3>
+              <span class="package-price">$1,500 <small>MXN</small></span>
+            </div>
+            <p class="package-desc">Landing sencilla basada en plantilla.</p>
+            <span class="package-link">Ver plantillas →</span>
+          </a>
+
+          <a class="package-card" href="#tier-estandar">
+            <div class="package-head">
+              <h3>Estándar</h3>
+              <span class="package-price">$2,400 <small>MXN</small></span>
+            </div>
+            <p class="package-desc">Más secciones, contenido y personalización.</p>
+            <span class="package-link">Ver plantillas →</span>
+          </a>
+
+          <a class="package-card" href="#tier-completo">
+            <div class="package-head">
+              <h3>Completo</h3>
+              <span class="package-price">$4,000 <small>MXN</small></span>
+            </div>
+            <p class="package-desc">Portafolio, redes, contenido, videos, etc.</p>
+            <span class="package-link">Ver plantillas →</span>
+          </a>
+
+          <a class="package-card" href="#tier-deluxe">
+            <div class="package-head">
+              <h3>Deluxe</h3>
+              <span class="package-price">$6,000 <small>MXN</small></span>
+            </div>
+            <p class="package-desc">Mayor personalización y sitio más completo.</p>
+            <span class="package-link">Ver plantillas →</span>
+          </a>
+
+          <a class="package-card" href="#tier-negocio">
+            <div class="package-head">
+              <h3>Empresarial / Multipágina</h3>
+              <span class="package-price">Desde $6,000–$10,000+ <small>MXN</small></span>
+            </div>
+            <p class="package-desc">Sitio multipágina a la medida — cotización personalizada.</p>
+            <span class="package-link">Ver plantillas →</span>
+          </a>
+        </div>
+
+        <div class="package-scope">
+          <p><strong>Todos los paquetes incluyen:</strong> selección de plantilla, personalización, adaptación de contenido, versión móvil y publicación.</p>
+          <p><strong>Ningún paquete incluye:</strong> dominio, hosting, cambios posteriores ni funcionalidades especiales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOPORTE Y MODIFICACIONES -->
+    <section class="support" id="soporte">
+      <div class="container">
+        <p class="eyebrow">Después de la entrega</p>
+        <h2>Soporte y modificaciones</h2>
+
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>Cambio puntual</h3>
+            <span class="support-price">$300 MXN</span>
+            <p>Un cambio menor.</p>
+          </div>
+
+          <div class="support-card">
+            <h3>Pack de modificaciones</h3>
+            <span class="support-price">$500 MXN</span>
+            <p>Hasta 3 cambios menores en una misma solicitud.</p>
+          </div>
+
+          <div class="support-card">
+            <h3>Mantenimiento mensual</h3>
+            <span class="support-price">$800 MXN / mes</span>
+            <p>Cambios recurrentes de textos, fotos, enlaces y pequeños ajustes visuales.</p>
+          </div>
+        </div>
+
+        <div class="support-notes">
+          <p class="support-note">
+            Los cambios mayores, rediseños, nuevas secciones o funcionalidades nuevas se cotizan por separado.
+          </p>
+          <p class="support-note">
+            El sitio se entrega después de una revisión y aprobación final. Cualquier cambio
+            posterior puede contratarse mediante soporte y modificaciones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container">
+        <p class="eyebrow">Contacto</p>
+        <h2>¿Listo para tu plantilla?</h2>
+        <p class="section-lede">Escríbenos por WhatsApp o síguenos en Instagram para ver más ejemplos.</p>
+        <div class="contact-actions">
+          <a
+            class="btn btn--primary"
+            href="https://wa.me/527291024089"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.27-4.38c0-4.55 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.25 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43-.14-.01-.3-.01-.47-.01-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a
+            class="btn btn--secondary"
+            href="https://www.instagram.com/sofia.cadi_/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.14c-.3.76-.5 1.63-.56 2.91C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.63.5 2.91.56C8.33 24 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/>
+            </svg>
+            Instagram
+          </a>
         </div>
       </div>
     </section>

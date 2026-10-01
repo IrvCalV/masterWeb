@@ -1,0 +1,145 @@
+/*
+  Paquetes y Soporte: mismas tarjetas oscuras con borde (no la isla clara
+  de .card, que esta reservada a miniaturas de plantillas) para que
+  precios y alcance se lean como informacion del propio catalogo, no
+  como otra plantilla mas.
+*/
+
+/* .packages viene justo despues del ultimo tier-block del catalogo, que
+   ya aporta su propia banda de color con padding-block grande -- el
+   padding-top generico de <section> (96px) encima de eso se sentia como
+   un salto enorme antes de llegar a "Paquetes". */
+.packages,
+.support {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.package-grid,
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+/* .package-grid ya tiene un .section-lede entre el h2 y la rejilla que
+   aporta ese espacio -- "Soporte y modificaciones" no tiene bajada, asi
+   que sin esto el titulo queda pegado directo a las tarjetas. */
+.support-grid {
+  margin-top: calc(var(--space-xl) / 2);
+}
+
+.package-card,
+.support-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(243, 240, 233, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* .package-card es un <a> -- enlaza al tier correspondiente del
+   catalogo (#tier-basico, etc.) para que "ver un paquete" lleve directo
+   a sus plantillas de ejemplo. */
+.package-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.package-card:hover,
+.support-card:hover,
+.package-card:focus-visible,
+.package-card.is-touch-active,
+.support-card.is-touch-active {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.package-link {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.package-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.package-head h3,
+.support-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.package-price,
+.support-price {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.package-price small,
+.support-price {
+  font-size: var(--text-sm);
+}
+
+.package-desc,
+.support-card p {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.support-card .support-price {
+  margin-top: 2px;
+}
+
+/* Incluye / No incluye -- aplica a los 5 paquetes por igual, asi que se
+   muestra una sola vez debajo de la rejilla en vez de repetirse en cada
+   tarjeta. */
+.package-scope {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-sm) var(--space-xl);
+}
+
+.package-scope p {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.package-scope strong {
+  color: var(--ink);
+}
+
+/* Antes eran dos <p> sueltos en --ink-faint (muy bajo contraste) pegados
+   justo debajo de la rejilla de tarjetas -- se leian como relleno y se
+   perdian. El borde superior + color mas fuerte los separa visualmente
+   y los marca como aviso, no como texto secundario mas. */
+.support-notes {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.support-note {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  max-width: 70ch;
+  line-height: 1.6;
+}

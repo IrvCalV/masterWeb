@@ -2,6 +2,8 @@
 @import './base/variables.css';
 @import './components/nav.css';
 @import './components/cards.css';
+@import './components/packages.css';
+@import './components/contact.css';
 
 html {
   /* El truco de "full-bleed" en .tier-block (ver cards.css) calcula
@@ -80,6 +82,15 @@ h3 {
   font-size: var(--text-lg);
   color: var(--ink-soft);
   max-width: 60ch;
+}
+
+/* Bajada corta reutilizada por Paquetes, Soporte y Contacto -- mismo
+   tratamiento que .catalog-group-lede, fuera del scope del catalogo. */
+.section-lede {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xl);
 }
 
 .hero-stats {
