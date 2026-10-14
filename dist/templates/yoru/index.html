@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoru &middot; Izakaya nocturno</title>
+  <meta name="description" content="Yoru -- izakaya y ramen-ya nocturno en Ciudad de México. Menú, historia y reservaciones." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  />
+  <script type="module" crossorigin src="./assets/main-S5qVtMoC.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-C5oR_7vH.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" data-open="false">
+    <div class="nav-inner">
+      <div class="nav-menu">
+        <nav class="nav-links nav-links--left">
+          <a class="is-active" href="./index.html">Inicio</a>
+          <a href="./menu.html">Menú</a>
+        </nav>
+        <nav class="nav-links nav-links--right">
+          <a href="./contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <a class="nav-brand" href="./index.html">Yoru</a>
+      <span class="nav-status">
+        <span class="nav-status-dot" aria-hidden="true"></span>
+        Abierto hasta 02:00
+      </span>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy" data-hero-copy>
+        <p class="eyebrow">Izakaya &amp; ramen-ya &middot; Ciudad de México</p>
+        <h1 data-hero-headline>Fideos calientes, <em>noche larga</em></h1>
+        <p>
+          Caldo de cocción lenta, brasas de carbón y sake frío, servidos
+          hasta tarde en un rincón de la ciudad que no cierra. Esto no
+          es comida rápida: es comida que espera a que llegues.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-on-dark btn-lg" href="./menu.html">Ver menú</a>
+          <a class="btn btn-accent-2 btn-lg" href="./contacto.html">Reservar lugar</a>
+        </div>
+      </div>
+      <!-- DUMMY -- foto generica de Unsplash (licencia libre) como
+           placeholder. Reemplaza src por fotografia real cuando la tengas. -->
+      <div class="hero-media" data-hero-media>
+        <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=1400&q=80" alt="Tazón de ramen humeante" data-hero-parallax />
+        <div class="hero-media-scrim" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!--
+      EXPLORA POR CATEGORIA: cada tile abre #category-modal (ver
+      category-explorer.js) con la carta completa de esa categoria --
+      vistazo rapido sin salir del home. La carta completa de verdad
+      sigue viviendo en menu.html.
+    -->
+    <section class="menu-explorer">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Explora</p>
+          <h2>Por categoría</h2>
+          <p class="lede">Da clic en una categoría para ver la carta completa sin salir de aquí.</p>
+        </div>
+        <div class="menu-explorer-grid" data-reveal-group>
+          <button class="category-tile" type="button" data-category="para-picar">
+            <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&q=80" alt="" />
+            <span class="category-tile-label">
+              <span class="eyebrow">01</span>
+              <span class="category-tile-name">Para picar</span>
+            </span>
+          </button>
+          <button class="category-tile" type="button" data-category="ramen-donburi">
+            <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=800&q=80" alt="" />
+            <span class="category-tile-label">
+              <span class="eyebrow">02</span>
+              <span class="category-tile-name">Ramen &amp; donburi</span>
+            </span>
+          </button>
+          <button class="category-tile" type="button" data-category="postres">
+            <img src="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=800&q=80" alt="" />
+            <span class="category-tile-label">
+              <span class="eyebrow">03</span>
+              <span class="category-tile-name">Postres</span>
+            </span>
+          </button>
+          <button class="category-tile" type="button" data-category="para-beber">
+            <img src="https://images.unsplash.com/photo-1554502078-ef0fc409efce?auto=format&fit=crop&w=800&q=80" alt="" />
+            <span class="category-tile-label">
+              <span class="eyebrow">04</span>
+              <span class="category-tile-name">Para beber</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Destacados</p>
+          <h2>Platillos favoritos</h2>
+          <p class="lede">Una selección de la carta actual. Duplica un <code>.product-card</code> para agregar más platillos.</p>
+        </div>
+
+        <div class="product-grid" data-reveal-group>
+          <article
+            class="product-card"
+            data-name="Tonkotsu ramen"
+            data-price="$215 MXN"
+            data-desc="Caldo de cerdo cocido 18 horas, chashu, huevo marinado, cebollín y alga nori. Intenso, cremoso, directo."
+            data-img="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Caldo de cocción larga"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=700&q=80" alt="Tonkotsu ramen" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Tonkotsu ramen</p>
+              <p class="product-price">$215 MXN</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Gyozas de cerdo y jengibre"
+            data-price="$140 MXN"
+            data-desc="Seis piezas doradas por un lado, rellenas de cerdo, col y jengibre, con salsa ponzu para mojar."
+            data-img="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Doradas al momento"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=700&q=80" alt="Gyozas de cerdo y jengibre" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Gyozas de cerdo y jengibre</p>
+              <p class="product-price">$140 MXN</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            data-name="Yakitori mixto (4 brochetas)"
+            data-price="$180 MXN"
+            data-desc="Pollo, cebollín y panceta al carbón, barnizados en tare de la casa. Humo, dulce y sal en cada bocado."
+            data-img="https://images.unsplash.com/photo-1519690889869-e705e59f72e1?auto=format&fit=crop&w=900&q=80"
+            data-detail-img="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=900&q=80"
+            data-detail-caption="Al carbón, a la vista"
+          >
+            <div class="product-photo">
+              <img src="https://images.unsplash.com/photo-1519690889869-e705e59f72e1?auto=format&fit=crop&w=700&q=80" alt="Yakitori mixto" loading="lazy" />
+              <div class="product-scrim">
+                <button class="product-quickview" type="button">Ver platillo</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Yakitori mixto (4 brochetas)</p>
+              <p class="product-price">$180 MXN</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      AMBIENTE: el lugar en si (barra, humo, gente de noche), no otra
+      vez comida -- Destacados ya cubrio los platillos. DUMMY: fotos
+      genericas de Unsplash como placeholder.
+    -->
+    <section class="ambiente">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Ambiente</p>
+          <h2>De noche, en Yoru</h2>
+          <p class="lede">La barra, el humo, la gente -- lo que no se ve en una foto de platillo.</p>
+        </div>
+        <div class="ambiente-grid" data-reveal-group>
+          <figure class="ambiente-photo ambiente-photo--a">
+            <img src="https://images.unsplash.com/photo-1554502078-ef0fc409efce?auto=format&fit=crop&w=1400&q=80" alt="Barra de Yoru iluminada por la noche" loading="lazy" />
+          </figure>
+          <figure class="ambiente-photo">
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=80" alt="Letrero de neón en la entrada" loading="lazy" />
+          </figure>
+          <figure class="ambiente-photo">
+            <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=900&q=80" alt="Mesa llena por la noche" loading="lazy" />
+          </figure>
+          <figure class="ambiente-photo">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" alt="Vasos y sake sobre la barra" loading="lazy" />
+          </figure>
+          <figure class="ambiente-photo">
+            <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=900&q=80" alt="Cocina abierta de Yoru" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="story">
+      <div class="story-grid">
+        <div class="story-photo" data-reveal>
+          <!-- DUMMY -- reemplaza por una foto real de la barra o del
+               chef de la marca cuando la tengas. -->
+          <img
+            src="https://images.unsplash.com/photo-1554502078-ef0fc409efce?auto=format&fit=crop&w=1200&q=80"
+            alt="Chef preparando ramen en la barra"
+          />
+        </div>
+        <div class="story-copy-wrap">
+          <div class="story-copy" data-reveal-group>
+            <p class="eyebrow">Nuestra historia</p>
+            <h2>&ldquo;El fuego no se apaga hasta que cierra la última mesa.&rdquo;</h2>
+            <p>
+              Reemplaza este texto con la historia real del restaurante: de
+              dónde viene el caldo, quién está en la barra y qué hace
+              distinta a la casa.
+            </p>
+            <div class="story-stats">
+              <div class="story-stat">
+                <strong>18h</strong>
+                <span>Cocción del caldo</span>
+              </div>
+              <div class="story-stat">
+                <strong>+5</strong>
+                <span>Años de trayectoria</span>
+              </div>
+              <div class="story-stat">
+                <strong>CDMX</strong>
+                <span>Abierto hasta tarde, todos los días</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVACIONES -->
+    <section class="newsletter">
+      <div class="container newsletter-inner" data-reveal-group>
+        <p class="eyebrow">Reservaciones</p>
+        <h2>Aparta tu lugar en la barra</h2>
+        <p class="lede">Cuéntanos fecha y número de personas y te confirmamos por WhatsApp o correo.</p>
+        <form class="newsletter-form" onsubmit="return false">
+          <input type="date" aria-label="Fecha" required />
+          <input type="number" min="1" max="20" placeholder="Personas" aria-label="Número de personas" required />
+          <button class="btn btn-primary" type="submit">Reservar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Yoru</p>
+        <p class="footer-tagline">Izakaya nocturno. Ramen, yakitori y sake hasta tarde, todos los días.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navegación</p>
+        <nav class="footer-links">
+          <a href="./menu.html">Menú</a>
+          <a href="./contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Síguenos</p>
+        <nav class="footer-links">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-note">&copy; 2026 Yoru.</p>
+      <p class="footer-note">Caldo, brasa y sake, toda la noche.</p>
+      <span class="footer-credit">By Irv</span>
+    </div>
+  </footer>
+
+  <a class="reserve-float" href="./contacto.html" data-reserve-float>Reservar</a>
+
+  <!-- QUICK VIEW MODAL (compartido) -->
+  <div class="product-modal" id="product-modal" data-open="false">
+    <div class="product-modal-panel">
+      <button class="product-modal-close" type="button" aria-label="Cerrar">&times;</button>
+      <div class="product-modal-media">
+        <div class="product-modal-slide is-active">
+          <img src="" alt="" />
+        </div>
+        <div class="product-modal-slide">
+          <img src="" alt="" />
+        </div>
+        <p class="product-modal-caption"></p>
+        <div class="product-modal-dots">
+          <button class="product-modal-dot is-active" type="button" aria-label="Foto del platillo"></button>
+          <button class="product-modal-dot" type="button" aria-label="Detalle de preparación"></button>
+        </div>
+      </div>
+      <div class="product-modal-body">
+        <p class="product-modal-eyebrow">Yoru</p>
+        <h3 class="product-modal-name"></h3>
+        <p class="product-modal-price"></p>
+        <p class="product-modal-desc"></p>
+        <a class="btn btn-primary product-modal-cta" href="#">Reservar mesa</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY MODAL (compartido, ver src/js/components/category-explorer.js) -->
+  <div class="category-modal" id="category-modal" data-open="false">
+    <div class="category-modal-panel">
+      <button class="category-modal-close" type="button" aria-label="Cerrar">&times;</button>
+      <div class="category-modal-head">
+        <p class="eyebrow" data-category-modal-eyebrow></p>
+        <h3 data-category-modal-title></h3>
+      </div>
+      <div class="category-modal-items" data-category-modal-items></div>
+    </div>
+  </div>
+
+</body>
+</html>
